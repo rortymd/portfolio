@@ -1,6 +1,6 @@
-# project-template
+# portfolio
 
-My basic setup for web applications.
+My portfolio website.
 
 Useful resources:
 
