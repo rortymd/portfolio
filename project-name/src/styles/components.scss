@@ -1,0 +1,31 @@
+@use './_vars.scss';
+
+/* main size container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* prevent scrolling */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: vars.$smallScreen) {
+}
+
+/* tablets */
+@media (max-width: vars.$tablet) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* mobile phones */
+@media (max-width: vars.$phone) {
+    .container {
+        padding: 0 5px;
+    }
+}
