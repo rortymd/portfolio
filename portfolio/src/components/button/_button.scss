@@ -1,0 +1,117 @@
+@use '../../styles/_vars.scss';
+
+.btn {
+    display: block;
+    width: fit-content;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(vars.$black, 0.2);
+    text-align: center;
+    transition: vars.$transition;
+    transition-property: transform, box-shadow;
+    outline: none;
+    position: relative;
+
+    // background
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url('../components/button/img/btn-bg-light.webp');
+        background-size: cover;
+        border-radius: inherit;
+        transition: vars.$transition;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    // button inner content
+    .btn__content {
+        display: inline-block;
+        padding: 10px 20px;
+        color: vars.$black;
+        border-radius: 8px;
+        transition: vars.$transition;
+        transition-property: color, background-color;
+        font-size: 20px;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+    }
+
+    // states
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 10px rgba(vars.$black, 0.5);
+
+        // background
+        &::before {
+            filter: brightness(25%);
+        }
+
+        // button inner content
+        .btn__content {
+            color: vars.$white;
+            background-color: transparent;
+        }
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    // modificators
+    &.btn--alt {
+        // background
+        &::before {
+            background-image: url('../components/button/img/btn-bg-dark.webp');
+        }
+
+        // button inner content
+        .btn__content {
+            color: vars.$white;
+        }
+
+        // states
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 10px rgba(vars.$red, 0.5);
+
+            // background
+            &::before {
+                filter: brightness(50%);
+            }
+
+            // button inner content
+            .btn__content {
+                color: vars.$red;
+            }
+        }
+    }
+
+    &.btn--external-link {
+        position: relative;
+
+        .btn__ext-link-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0;
+            transform: translate3d(0%, 100%, 0);
+            transition: vars.$transition;
+            transition-property: opacity, transform;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        &:hover,
+        &:focus {
+            .btn__ext-link-icon {
+                opacity: 1;
+                transform: translate3d(0%, 75%, 0);
+            }
+        }
+    }
+}

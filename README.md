@@ -2,7 +2,7 @@
 
 My portfolio website.
 
-Useful resources:
+Used services:
 
 1. Icons:
     - https://icons8.com/
@@ -12,3 +12,6 @@ Useful resources:
     - https://heroicons.com/ (tailwind icons)
     - https://icons.getbootstrap.com/
 2. Images transpiler - https://squoosh.app/
+3. Blur images - https://www.befunky.com/create/blur-image/
+4. SVG assets generator - https://haikei.app/
+5. SVG editor - https://boxy-svg.com/

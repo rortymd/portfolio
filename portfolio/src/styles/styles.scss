@@ -1,21 +1,29 @@
 @use '../fonts/fonts.scss';
 @use './_vars.scss';
-@use './components.scss';
+@use '../components/button/_button.scss';
+@import url('./cssvars.css');
 
-* {
+*,
+*::before,
+*::after {
     /* reset default styles */
     margin: 0;
     padding: 0;
     text-decoration: none;
-    list-style: none;
     /* set common styles */
+    line-height: 150%;
 }
 
-/* make the footer always stick to the bottom even if there's no content on the page */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* main size container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* prevent scrolling */
+.no-scroll {
+    overflow: hidden;
 }
 
 /* SCREEN ADAPTATION */
