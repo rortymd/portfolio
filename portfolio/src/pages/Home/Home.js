@@ -1,4 +1,5 @@
 // libraries
+import balanceText from 'balance-text';
 // styles
 import 'modern-normalize/modern-normalize.css';
 import 'Src/styles/styles.scss';
@@ -10,6 +11,8 @@ import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadin
 import './homeSections/Intro/Intro';
 import 'Sections/Header/Header';
 import 'Sections/Footer/Footer.scss';
+
+balanceText();
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();

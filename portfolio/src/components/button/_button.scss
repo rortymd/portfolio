@@ -2,7 +2,7 @@
 
 .btn {
     display: block;
-    width: fit-content;
+    max-width: 200px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(vars.$black, 0.2);
     text-align: center;
@@ -63,6 +63,8 @@
 
     // modificators
     &.btn--alt {
+        box-shadow: 0 0 10px rgba(vars.$white, 0.05);
+
         // background
         &::before {
             background-image: url('../components/button/img/btn-bg-dark.webp');
@@ -76,7 +78,7 @@
         // states
         &:hover,
         &:focus {
-            box-shadow: 0 0 10px rgba(vars.$red, 0.5);
+            box-shadow: 0 0 10px rgba(vars.$red, 0.25);
 
             // background
             &::before {

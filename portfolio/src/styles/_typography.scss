@@ -1,0 +1,18 @@
+@use './vars';
+
+.title {
+    color: vars.$white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+    font-size: 32px;
+
+    &.title--lg {
+        font-size: 48px;
+    }
+}
+
+.paragraph {
+    color: vars.$white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}

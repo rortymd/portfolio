@@ -40,5 +40,10 @@
         "webpack-cli": "^5.0.1",
         "webpack-dev-server": "^4.8.1",
         "xml-loader": "^1.2.1"
+    },
+    "dependencies": {
+        "@splidejs/splide": "^4.1.4",
+        "balance-text": "^3.3.1",
+        "gsap": "^3.11.5"
     }
 }
