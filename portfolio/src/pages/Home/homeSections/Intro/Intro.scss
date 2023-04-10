@@ -1,8 +1,6 @@
 @use '../../../../styles/vars';
 
 .intro {
-    background-color: vars.$black;
-
     .splide__arrow {
         background-color: vars.$black;
         transition: vars.$transition;
@@ -36,7 +34,7 @@
 
     .my-carousel-progress-bar {
         width: 0;
-        height: 5px;
+        height: 4px;
         background-color: vars.$red;
         transition: width vars.$transition;
     }
@@ -46,7 +44,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    min-height: calc(100vh - 5px);
+    min-height: calc(100vh - 4px);
 }
 
 .image.intro-item__cover {

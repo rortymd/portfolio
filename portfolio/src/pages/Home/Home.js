@@ -3,6 +3,7 @@ import balanceText from 'balance-text';
 // styles
 import 'modern-normalize/modern-normalize.css';
 import 'Src/styles/styles.scss';
+import './Home.scss';
 // components
 import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
 import 'Components/lazyLoadImages/lazyLoadImages.scss';

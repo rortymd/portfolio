@@ -2,6 +2,7 @@
 @use './_vars.scss';
 @use './_typography.scss';
 @use '../components/button/_button.scss';
+@use '../components/link/link';
 @import url('./cssvars.css');
 
 *,
@@ -11,6 +12,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style: none;
     /* set common styles */
     line-height: 150%;
 }

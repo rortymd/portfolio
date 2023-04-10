@@ -1,0 +1,41 @@
+@use '../../styles/vars';
+
+.link {
+    padding-bottom: 5px;
+    color: vars.$white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    transition: vars.$transition;
+    transition-property: color, opacity;
+    outline: none;
+    position: relative;
+
+    /* link underline */
+    &::after {
+        content: '';
+        width: 99%;
+        height: 2px;
+        background-color: vars.$white;
+        border-radius: 6px;
+        opacity: 0;
+        transform: translate3d(-50%, -3px, 0);
+        transition: vars.$transition;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &:hover,
+    &:focus {
+        &::after {
+            opacity: 0.8;
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
