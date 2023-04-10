@@ -28,6 +28,7 @@
         }
     }
 
+    /* bottom progress bar */
     .my-carousel-progress {
         background-color: vars.$black;
     }
@@ -40,6 +41,7 @@
     }
 }
 
+/* single carousel item */
 .intro-item {
     display: grid;
     grid-template-columns: 1fr;
@@ -47,6 +49,7 @@
     min-height: calc(100vh - 4px);
 }
 
+/* background image */
 .image.intro-item__cover {
     grid-column: 1;
     grid-row: 1;
@@ -59,7 +62,8 @@
     }
 }
 
-.intro-item__descr {
+/* item info */
+.intro-item__info {
     grid-column: 1;
     grid-row: 1;
     padding: 100px 100px 100px;
@@ -73,23 +77,28 @@
     }
 }
 
-.intro-item__info {
+/* wrapper for the name and the description */
+.intro-item__descr{
     width: 50%;
 }
 
+/* item's name */
 .intro-item__title {
     margin-bottom: 10px;
 }
 
+/* item's description */
 .intro-item__subtitle {
     font-weight: 500;
 }
 
+/* wrapper for the links */
 .intro-item__links {
     width: 50%;
     margin-top: auto;
 }
 
+/* single item's link */
 .intro__link {
     margin: 0 auto;
 
@@ -100,14 +109,17 @@
 
 /* SCREEN ADAPTATION */
 @media (max-width: vars.$smallScreen) {
+    /* item info */
     .intro-item__info {
-        width: auto;
-    }
-
-    .intro-item__descr {
         padding: 75px;
     }
 
+    /* wrapper for the name and the description */
+    .intro-item__descr {
+        width: auto;
+    }
+
+    /* wrapper for the links */
     .intro-item__links {
         min-width: 250px;
     }
@@ -115,18 +127,21 @@
 
 /* tablets */
 @media (max-width: vars.$tablet) {
-    .intro-item__descr {
+    /* item info */
+    .intro-item__info {
         .container {
             flex-wrap: wrap;
         }
     }
 
-    .intro-item__info {
+    /* wrapper for the name and the description */
+    .intro-item__descr {
         width: 100%;
         margin-bottom: 60px;
         text-align: center;
     }
 
+    /* wrapper for the links */
     .intro-item__links {
         width: 100%;
     }
@@ -144,7 +159,8 @@
         }
     }
 
-    .intro-item__descr {
+    /* item info */
+    .intro-item__info {
         padding: 150px 0px;
     }
 }

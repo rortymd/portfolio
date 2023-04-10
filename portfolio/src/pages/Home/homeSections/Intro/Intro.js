@@ -42,7 +42,7 @@ const observerOptions = {
 
 // animations
 introItems.forEach((item) => {
-    const infoWrapper = item.querySelector('.intro-item__info');
+    const infoWrapper = item.querySelector('.intro-item__descr');
     const linksWrapper = item.querySelector('.intro-item__links');
 
     const action = gsap
