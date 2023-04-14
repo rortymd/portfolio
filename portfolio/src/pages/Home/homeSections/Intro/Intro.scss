@@ -66,7 +66,7 @@
 .intro-item__info {
     grid-column: 1;
     grid-row: 1;
-    padding: 100px 100px 100px;
+    padding: 200px 100px 100px;
     background-color: rgba(0, 0, 0, 0.85);
     position: relative;
     z-index: 2;
@@ -111,7 +111,7 @@
 @media (max-width: vars.$smallScreen) {
     /* item info */
     .intro-item__info {
-        padding: 75px;
+        padding: 200px 75px 75px;
     }
 
     /* wrapper for the name and the description */
@@ -161,6 +161,6 @@
 
     /* item info */
     .intro-item__info {
-        padding: 150px 0px;
+        padding: 250px 0px;
     }
 }

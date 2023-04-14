@@ -1,4 +1,8 @@
-body{
+body {
     background-image: url('../../images/backgrounds/body-bg-dark.svg');
     background-size: cover;
+}
+
+main {
+    overflow: hidden;
 }

@@ -1,0 +1,37 @@
+@use '../../../../styles/vars';
+
+.main {
+    padding: 0 0 1000px;
+}
+
+.bio__title {
+    span {
+        display: inline-block;
+        color: vars.$white;
+    }
+
+    .paragraph {
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 500;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.bio__title-hey {
+    margin-bottom: 40px;
+
+    span {
+        font-size: 72px;
+        transform-origin: bottom;
+        pointer-events: none;
+    }
+}
+
+#bio__emoji {
+    width: 80px;
+    transform: translateY(25%);
+}

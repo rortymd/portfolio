@@ -2,7 +2,7 @@
 
 My portfolio website.
 
-Used services:
+Useful services:
 
 1. Icons:
     - https://icons8.com/

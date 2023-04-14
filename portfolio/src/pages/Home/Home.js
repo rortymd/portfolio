@@ -11,6 +11,7 @@ import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadin
 // sections
 import './homeSections/Intro/Intro';
 import 'Sections/Header/Header';
+import './homeSections/Bio/Bio';
 import 'Sections/Footer/Footer.scss';
 
 balanceText();
