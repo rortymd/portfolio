@@ -31,7 +31,6 @@ gsap.timeline({
         trigger: '.bio__title',
         start: 'top 90%',
         end: '+=500',
-        markers: true,
         scrub: 2,
     },
 })

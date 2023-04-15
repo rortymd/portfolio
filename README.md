@@ -15,3 +15,4 @@ Useful services:
 3. Blur images - https://www.befunky.com/create/blur-image/
 4. SVG assets generator - https://haikei.app/
 5. SVG editor - https://boxy-svg.com/
+6. Color palette - https://palettes.shecodes.io/palettes/659#palette
