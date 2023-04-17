@@ -1,9 +1,15 @@
-@use '../fonts/fonts.scss';
+/* variables */
 @use './_vars.scss';
+/* color themes */
+@use './color-themes/dark-theme.scss';
+@use './color-themes/light-theme.scss';
+/* fonts */
+@use '../fonts/fonts.scss';
+/* text classes */
 @use './_typography.scss';
+/* components */
 @use '../components/button/_button.scss';
 @use '../components/link/link';
-@import url('./cssvars.css');
 
 *,
 *::before,

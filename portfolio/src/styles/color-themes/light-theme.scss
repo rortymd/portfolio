@@ -1,0 +1,8 @@
+@use '../vars';
+
+body.light-theme {
+    --main-color: #{vars.$white};
+    --secondary-color: #{vars.$black};
+
+    --main-color-alpha: rgba(217, 217, 217, 0.99);
+}

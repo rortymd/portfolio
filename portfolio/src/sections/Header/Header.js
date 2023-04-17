@@ -1,5 +1,6 @@
 // styles
 import './Header.scss';
+import './theme-toggler/theme-toggler';
 
 /* dom elements */
 const navButton = document.querySelector('.header__nav-btn');
@@ -73,10 +74,10 @@ if (window.innerWidth <= 1024) {
 }
 
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 1024 && navActive) {
+    if (window.innerWidth > 1024) {
         hideNav();
         setTimeout(() => {
             showLinks();
-        }, 400);
+        }, 350);
     }
 });

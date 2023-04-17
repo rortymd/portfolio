@@ -1,0 +1,8 @@
+@use '../_vars.scss';
+
+body.dark-theme {
+    --main-color: #{vars.$black};
+    --secondary-color: #{vars.$white};
+
+    --main-color-alpha: rgba(20, 20, 20, 0.99);
+}
