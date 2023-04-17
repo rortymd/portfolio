@@ -5,7 +5,7 @@ import './theme-toggler/theme-toggler';
 /* dom elements */
 const navButton = document.querySelector('.header__nav-btn');
 const navList = document.querySelector('.header__links-list');
-const navLinks = document.querySelectorAll('.header__link');
+const navElems = document.querySelectorAll('.header__list-item > *');
 
 /* show/hide the navigation menu */
 // navigation status
@@ -58,13 +58,13 @@ navButton.addEventListener('click', () => {
 
 /* manage the links' tab index */
 function showLinks() {
-    navLinks.forEach((link) => {
+    navElems.forEach((link) => {
         link.style.visibility = 'visible';
     });
 }
 
 function hideLinks() {
-    navLinks.forEach((link) => {
+    navElems.forEach((link) => {
         link.style.visibility = 'hidden';
     });
 }
@@ -75,9 +75,12 @@ if (window.innerWidth <= 1024) {
 
 window.addEventListener('resize', () => {
     if (window.innerWidth > 1024) {
-        hideNav();
-        setTimeout(() => {
+        if (navActive) {
+            hideNav();
+        } else {
             showLinks();
-        }, 350);
+        }
+    } else {
+        hideLinks();
     }
 });

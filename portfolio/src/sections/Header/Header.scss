@@ -28,7 +28,7 @@
 
         path {
             transition: vars.$transition;
-            
+
             &:first-child {
                 stroke: var(--secondary-color);
             }
@@ -144,12 +144,12 @@
 
     @for $i from 1 through 4 {
         .header__list-item:nth-child(#{$i}) {
-            transition-delay: calc(0.03s * $i);
+            transition-delay: calc(0.025s * $i);
         }
     }
 
     /* single header link <a> */
-    .header__link {
+    a.header__link {
         font-size: 26px;
     }
 

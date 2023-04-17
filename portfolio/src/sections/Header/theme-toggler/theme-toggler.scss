@@ -12,7 +12,6 @@
     transform-origin: center;
     transition: var(--theme-toggle__within--duration);
     transition-property: transform;
-    transition-timing-function: cubic-bezier(0, 0, 0, 1.25);
 }
 
 .theme-toggle--toggled:not(label).theme-toggle .theme-toggle__within .theme-toggle__within__circle,
@@ -29,10 +28,12 @@
 }
 
 .theme-toggle {
+    display: flex;
+    margin: 0 auto;
     color: var(--secondary-color);
     border: none;
     background: none;
-    font-size: 32px;
+    font-size: 36px;
     cursor: pointer;
 }
 .theme-toggle input[type='checkbox'] {

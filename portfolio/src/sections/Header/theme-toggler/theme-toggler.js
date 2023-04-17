@@ -1,6 +1,11 @@
 let colorTheme;
 
-colorTheme = 'dark-theme';
+if (!localStorage.getItem('color-theme')) {
+    localStorage.setItem('color-theme', 'dark-theme');
+    colorTheme = 'dark-theme';
+} else {
+    colorTheme = localStorage.getItem('color-theme');
+}
 
 const body = document.body;
 const themeToggler = document.querySelector('.theme-toggle');
@@ -22,4 +27,8 @@ themeToggler.addEventListener('click', () => {
     colorTheme === 'dark-theme' ? (colorTheme = 'light-theme') : (colorTheme = 'dark-theme');
 
     handleTheme();
+
+    if (localStorage.getItem('color-theme') !== colorTheme) {
+        localStorage.setItem('color-theme', colorTheme);
+    }
 });
