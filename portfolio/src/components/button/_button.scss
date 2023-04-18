@@ -1,118 +1,162 @@
 @use '../../styles/_vars.scss';
 
+/* main button styles */
 .btn {
-    display: block;
-    max-width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(vars.$black, 0.2);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
     text-align: center;
     transition: vars.$transition;
-    transition-property: transform, box-shadow;
-    outline: none;
+    transition-property: color, border-color, transform;
+    cursor: pointer;
+    overflow: hidden;
     position: relative;
 
-    // background
+    /* gradient background */
     &::before {
         content: '';
-        width: 100%;
-        height: 100%;
-        background-image: url('../components/button/img/btn-bg-light.webp');
-        background-size: cover;
-        border-radius: inherit;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        transform-origin: right;
         transition: vars.$transition;
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: -1;
     }
 
-    // button inner content
-    .btn__content {
-        display: inline-block;
-        padding: 10px 20px;
-        color: vars.$black;
-        border-radius: 8px;
-        transition: vars.$transition;
-        transition-property: color, background-color;
-        font-size: 20px;
-        font-weight: 500;
-        position: relative;
-        z-index: 2;
-    }
-
-    // states
-    &:hover,
-    &:focus {
-        box-shadow: 0 0 10px rgba(vars.$black, 0.5);
-
-        // background
+    &:hover {
         &::before {
-            filter: brightness(25%);
-        }
-
-        // button inner content
-        .btn__content {
-            color: vars.$white;
-            background-color: transparent;
+            transform: scaleX(3.4);
         }
     }
 
     &:active {
         transform: scale(0.95);
     }
+}
 
-    // modificators
-    &.btn--alt {
-        box-shadow: 0 0 10px rgba(vars.$white, 0.05);
+/* icon for the external link */
+.btn--ext-link {
+    padding-right: 35px;
 
-        // background
+    &::after {
+        width: 15px;
+        transform: translate3d(0, 50%, 0);
+        opacity: 0;
+        transition: vars.$transition;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    &:hover {
+        &::after {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
+}
+
+/* dark website theme */
+body.dark-theme {
+    /* main button styles */
+    .btn {
+        color: vars.$white;
+        border-color: rgba(vars.$white, 0.2);
+
         &::before {
-            background-image: url('../components/button/img/btn-bg-dark.webp');
-        }
-
-        // button inner content
-        .btn__content {
-            color: vars.$white;
-        }
-
-        // states
-        &:hover,
-        &:focus {
-            box-shadow: 0 0 10px rgba(vars.$red, 0.25);
-
-            // background
-            &::before {
-                filter: brightness(50%);
-            }
-
-            // button inner content
-            .btn__content {
-                color: vars.$red;
-            }
+            background-image: linear-gradient(
+                to right,
+                lighten(vars.$black, 15%) 25%,
+                lighten(vars.$black, 12%) 25% 40%,
+                lighten(vars.$black, 9%) 40% 55%,
+                lighten(vars.$black, 6%) 55% 70%,
+                lighten(vars.$black, 3%) 70%
+            );
         }
     }
 
-    &.btn--external-link {
-        position: relative;
+    /* alternative button styles */
+    .btn--alt {
+        color: vars.$black;
+        border-color: rgba(vars.$black, 0.2);
 
-        .btn__ext-link-icon {
-            width: 16px;
-            height: 16px;
-            opacity: 0;
-            transform: translate3d(0%, 100%, 0);
-            transition: vars.$transition;
-            transition-property: opacity, transform;
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 1;
+        &::before {
+            background-image: linear-gradient(
+                to right,
+                vars.$white 25%,
+                darken(vars.$white, 3%) 25% 40%,
+                darken(vars.$white, 6%) 40% 55%,
+                darken(vars.$white, 9%) 55% 70%,
+                darken(vars.$white, 12%) 70%
+            );
+        }
+    }
+
+    /* icon for the external link */
+    .btn--ext-link {
+        &::after {
+            content: url('../images/icons/ext-link-light.svg');
         }
 
-        &:hover,
-        &:focus {
-            .btn__ext-link-icon {
-                opacity: 1;
-                transform: translate3d(0%, 75%, 0);
+        &.btn--alt {
+            &::after {
+                content: url('../images/icons/ext-link-dark.svg');
+            }
+        }
+    }
+}
+
+body.light-theme {
+    /* main button styles */
+    .btn {
+        color: vars.$black;
+        border-color: rgba(vars.$black, 0.2);
+
+        &::before {
+            background-image: linear-gradient(
+                to right,
+                vars.$white 25%,
+                darken(vars.$white, 3%) 25% 40%,
+                darken(vars.$white, 6%) 40% 55%,
+                darken(vars.$white, 9%) 55% 70%,
+                darken(vars.$white, 12%) 70%
+            );
+        }
+    }
+
+    /* alternative button styles */
+    .btn--alt {
+        color: vars.$white;
+        border-color: rgba(vars.$white, 0.2);
+
+        &::before {
+            background-image: linear-gradient(
+                to right,
+                lighten(vars.$black, 15%) 25%,
+                lighten(vars.$black, 12%) 25% 40%,
+                lighten(vars.$black, 9%) 40% 55%,
+                lighten(vars.$black, 6%) 55% 70%,
+                lighten(vars.$black, 3%) 70%
+            );
+        }
+    }
+
+    /* icon for the external link */
+    .btn--ext-link {
+        &::after {
+            content: url('../images/icons/ext-link-dark.svg');
+        }
+
+        &.btn--alt {
+            &::after {
+                content: url('../images/icons/ext-link-light.svg');
             }
         }
     }
