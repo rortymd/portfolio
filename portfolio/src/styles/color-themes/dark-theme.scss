@@ -1,5 +1,6 @@
 @use '../_vars.scss';
 
+/* dark theme for the whole website */
 body.dark-theme {
     --main-color: #{vars.$black};
     --secondary-color: #{vars.$white};

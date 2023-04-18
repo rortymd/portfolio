@@ -1,5 +1,6 @@
 @use '../vars';
 
+/* light theme for the whole website */
 body.light-theme {
     --main-color: #{vars.$white};
     --secondary-color: #{vars.$black};

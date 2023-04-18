@@ -1,9 +1,13 @@
 @use '../../../../styles/vars';
 
 .intro {
+    background-color: var(--intro-bg-color);
+    
     .splide__arrow {
-        background-color: vars.$black;
+        background-color: var(--main-color);
         transition: vars.$transition;
+        opacity: 0.5;
+        outline-color: vars.$red !important;
 
         &:disabled {
             opacity: 0;
@@ -15,22 +19,10 @@
         }
     }
 
-    .splide__pagination {
-        bottom: 15px;
-    }
-
-    .splide__pagination__page {
-        background-color: vars.$black;
-
-        &.is-active {
-            background-color: vars.$red;
-            transition: vars.$transition;
-        }
-    }
-
     /* bottom progress bar */
     .my-carousel-progress {
-        background-color: vars.$black;
+        background-color: var(--intro-bg-color);
+        transition: vars.$transition;
     }
 
     .my-carousel-progress-bar {
@@ -67,7 +59,9 @@
     grid-column: 1;
     grid-row: 1;
     padding: 200px 100px 100px;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: var(--intro-bg-color);
+    transition: vars.$transition;
+    transition-property: background-color;
     position: relative;
     z-index: 2;
 
@@ -78,7 +72,7 @@
 }
 
 /* wrapper for the name and the description */
-.intro-item__descr{
+.intro-item__descr {
     width: 50%;
 }
 

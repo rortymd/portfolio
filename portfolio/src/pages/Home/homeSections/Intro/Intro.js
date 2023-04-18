@@ -8,6 +8,7 @@ import './Intro.scss';
 /* carousel */
 const splide = new Splide('.intro.splide', {
     pagination: false,
+    autoplay: true,
 });
 
 const progressBar = splide.root.querySelector('.my-carousel-progress-bar');

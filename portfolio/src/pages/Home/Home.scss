@@ -1,3 +1,5 @@
+@use '../../styles/vars';
+
 body {
     background-image: url('../../images/backgrounds/body-bg-dark.svg');
     background-size: cover;
@@ -6,4 +8,14 @@ body {
 main {
     padding-bottom: 500px;
     overflow: hidden;
+}
+
+/* dark theme for the Home page */
+body.dark-theme {
+    --intro-bg-color: rgba(20, 20, 20, 0.85);
+}
+
+/* light theme for the Home page */
+body.light-theme {
+    --intro-bg-color: rgba(217, 217, 217, 0.85);
 }
