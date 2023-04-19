@@ -24,6 +24,18 @@
     line-height: 150%;
 }
 
+body {
+    background-size: cover;
+
+    &.dark-theme {
+        background-image: url('../images/backgrounds/body-bg-dark.svg');
+    }
+
+    &.light-theme {
+        background-image: url('../images/backgrounds/body-bg-light.svg');
+    }
+}
+
 /* main size container */
 .container {
     max-width: 1200px;

@@ -29,15 +29,17 @@ paragraphs.forEach((span) => {
 gsap.timeline({
     scrollTrigger: {
         trigger: '.bio__title',
-        start: 'top 90%',
-        end: '+=500',
+        start: '100px 100%',
+        end: '+=600',
         scrub: 2,
+        markers: true,
     },
 })
     .to(heyLetters, {
         scale: 1,
         opacity: 1,
         stagger: 0.5,
+        delay: 0.5,
     })
     .to(
         heyLetters,

@@ -3,7 +3,9 @@
 .bio__title {
     span {
         display: inline-block;
-        color: vars.$white;
+        color: var(--secondary-color);
+        transition: vars.$transition;
+        transition-property: color;
     }
 
     .paragraph {
@@ -27,7 +29,8 @@
     }
 }
 
-#bio__emoji {
+.bio__emoji {
+    display: block;
     width: 80px;
     transform: translateY(25%);
 }
