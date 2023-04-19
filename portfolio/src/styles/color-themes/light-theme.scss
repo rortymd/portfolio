@@ -2,8 +2,11 @@
 
 /* light theme for the whole website */
 body.light-theme {
+    /* colors */
     --main-color: #{vars.$white};
     --secondary-color: #{vars.$black};
 
+    /* colors with transparency */
     --main-color-alpha: rgba(217, 217, 217, 0.99);
+    --secondary-color-alpha: rgba(20, 20, 20, 0.75);
 }

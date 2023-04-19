@@ -6,10 +6,10 @@
 /* fonts */
 @use '../fonts/fonts.scss';
 /* text classes */
-@use './_typography.scss';
+@use './typography.scss';
 /* components */
-@use '../components/button/_button.scss';
-@use '../components/link/link';
+@use '../components/button/button.scss';
+@use '../components/link/link.scss';
 
 *,
 *::before,
@@ -34,6 +34,13 @@
 /* prevent scrolling */
 .no-scroll {
     overflow: hidden !important;
+}
+
+/* overlay scrollbar styles */
+.os-scrollbar {
+    --os-handle-bg: var(--secondary-color-alpha);
+    --os-size: 5px;
+    --os-padding-perpendicular: 0px;
 }
 
 /* SCREEN ADAPTATION */
