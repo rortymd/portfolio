@@ -23,7 +23,9 @@ function showNav() {
     navList.style.visibility = 'visible';
 
     // prevent scrolling
-    document.body.classList.add('no-scroll');
+    document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'hidden');
+    // hide the scrollbar
+    document.querySelector('.os-scrollbar-vertical').style.opacity = 0;
 }
 
 function hideNav() {
@@ -40,7 +42,9 @@ function hideNav() {
     }, 350);
 
     // allow scrolling
-    document.body.classList.remove('no-scroll');
+    document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'scroll');
+    // show the scrollbar
+    document.querySelector('.os-scrollbar-vertical').style.opacity = 1;
 }
 
 // handle click on the burger menu button
@@ -80,7 +84,7 @@ window.addEventListener('resize', () => {
         } else {
             showLinks();
         }
-    } else {
+    } else if (window.innerWidth <= 1024 && !navActive) {
         hideLinks();
     }
 });

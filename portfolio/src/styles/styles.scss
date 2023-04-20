@@ -29,10 +29,22 @@ body {
 
     &.dark-theme {
         background-image: url('../images/backgrounds/body-bg-dark.svg');
+
+        .os-scrollbar {
+            --os-handle-bg: rgba(217, 217, 217, 0.25);
+            --os-handle-bg-hover: rgba(217, 217, 217, 0.75);
+            --os-handle-bg-active: rgba(217, 217, 217, 0.85);
+        }
     }
 
     &.light-theme {
         background-image: url('../images/backgrounds/body-bg-light.svg');
+
+        .os-scrollbar {
+            --os-handle-bg: rgba(20, 20, 20, 0.25);
+            --os-handle-bg-hover: rgba(20, 20, 20, 0.75);
+            --os-handle-bg-active: rgba(20, 20, 20, 0.85);
+        }
     }
 }
 
@@ -50,8 +62,7 @@ body {
 
 /* overlay scrollbar styles */
 .os-scrollbar {
-    --os-handle-bg: var(--secondary-color-alpha);
-    --os-size: 5px;
+    --os-size: 8px;
     --os-padding-perpendicular: 0px;
 }
 

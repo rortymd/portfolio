@@ -29,10 +29,9 @@ paragraphs.forEach((span) => {
 gsap.timeline({
     scrollTrigger: {
         trigger: '.bio__title',
-        start: '100px 100%',
-        end: '+=600',
+        start: '50px 90%',
+        end: '+=600 100%',
         scrub: 2,
-        markers: true,
     },
 })
     .to(heyLetters, {
