@@ -22,10 +22,15 @@ function showNav() {
     // set the css "visibility" property
     navList.style.visibility = 'visible';
 
-    // prevent scrolling
-    document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'hidden');
-    // hide the scrollbar
-    document.querySelector('.os-scrollbar-vertical').style.opacity = 0;
+    // prevent scrolling (mobile devices)
+    document.body.classList.add('no-scroll');
+
+    // prevent scrolling (desktop)
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'hidden');
+        // hide the scrollbar
+        document.querySelector('.os-scrollbar-vertical').style.opacity = 0;
+    }
 }
 
 function hideNav() {
@@ -41,10 +46,15 @@ function hideNav() {
         navList.style.visibility = 'hidden';
     }, 350);
 
-    // allow scrolling
-    document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'scroll');
-    // show the scrollbar
-    document.querySelector('.os-scrollbar-vertical').style.opacity = 1;
+    // allow scrolling (mobile devices)
+    document.body.classList.remove('no-scroll');
+
+    // allow scrolling (desktop)
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'scroll');
+        // show the scrollbar
+        document.querySelector('.os-scrollbar-vertical').style.opacity = 1;
+    }
 }
 
 // handle click on the burger menu button

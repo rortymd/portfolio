@@ -1,25 +1,36 @@
 @use './vars';
 
-.title {
+@mixin text {
     color: var(--secondary-color);
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    text-shadow: 0 0 1px rgba(vars.$black, 0.15);
     transition: vars.$transition;
     transition-property: color;
+    letter-spacing: 1px;
+}
+
+.title {
+    @include text;
+
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 700;
 
     &.title--lg {
         font-size: 48px;
     }
 }
 
+.subtitle {
+    @include text;
+
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
 .paragraph {
-    color: var(--secondary-color);
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+    @include text;
+
     font-size: 18px;
     font-weight: 400;
-    letter-spacing: 1px;
-    transition: vars.$transition;
-    transition-property: color;
 }
