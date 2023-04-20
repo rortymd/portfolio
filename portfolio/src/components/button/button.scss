@@ -10,6 +10,7 @@
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 1px;
+    text-shadow: 0 0 1px rgba(vars.$black, 0.15);
     text-align: center;
     transition: vars.$transition;
     transition-property: color, border-color, transform;

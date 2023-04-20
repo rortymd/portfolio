@@ -6,12 +6,17 @@
     transition: vars.$transition;
     transition-property: color;
     letter-spacing: 1px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
+/* <h1> || <h2> */
 .title {
     @include text;
 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 36px;
     font-weight: 700;
 
@@ -20,17 +25,45 @@
     }
 }
 
+/* <h3> */
 .subtitle {
     @include text;
 
-    margin-bottom: 10px;
     font-size: 22px;
     font-weight: 500;
 }
 
+/* <p> */
 .paragraph {
     @include text;
 
     font-size: 18px;
     font-weight: 400;
+}
+
+/* <ul> */
+.list {
+    padding-left: 20px;
+}
+
+/* <li> */
+.list__item {
+    @include text;
+
+    max-width: 50%;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    list-style-type: circle;
+    list-style-position: outside;
+    list-style-image: url('../images/icons/check-circle.svg');
+}
+
+/* SCREEN ADAPTATION */
+/* tablets */
+@media (max-width: vars.$tablet) {
+    .list__item {
+        max-width: 90%;
+    }
 }

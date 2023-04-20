@@ -1,28 +1,23 @@
 @use '../../../../styles/vars';
 
+/* section margin bottom */
 .bio {
-    margin-bottom: 160px;
+    margin-bottom: 150px;
 }
 
+/* section text styles */
 .bio__title {
     span {
         display: inline-block;
         color: var(--secondary-color);
+        letter-spacing: 1px;
+        text-shadow: 0 0 1px rgba(vars.$black, 0.15);
         transition: vars.$transition;
         transition-property: color;
     }
-
-    .paragraph {
-        margin-bottom: 10px;
-        font-size: 24px;
-        font-weight: 500;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
 }
 
+/* "Heey" text */
 .bio__title-hey {
     margin-bottom: 20px;
 
@@ -32,10 +27,26 @@
         transform-origin: bottom;
         pointer-events: none;
     }
+
+    &::selection {
+        background-color: transparent;
+    }
 }
 
+/* emoji */
 .bio__emoji {
     display: block;
     width: 80px;
     transform: translateY(35%);
+}
+
+/* paragraph */
+.bio__paragraph {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 500;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }

@@ -9,13 +9,15 @@ import 'Components/lazyLoadImages/lazyLoadImages.scss';
 import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
 import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadingPlaceholder';
 import 'Components/overlayScrollbar/overlayScrollbar';
+import 'Components/smoothSlideIn/smoothSlideIn';
 // sections
-import './homeSections/Intro/Intro';
 import 'Sections/Header/Header';
+import './homeSections/Intro/Intro';
 import './homeSections/Bio/Bio';
+import './homeSections/Freelance/Freelance.scss';
 import 'Sections/Footer/Footer.scss';
 
-balanceText();
+balanceText('.title, .subtitle, .paragraph, .list__item', { watch: true });
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();

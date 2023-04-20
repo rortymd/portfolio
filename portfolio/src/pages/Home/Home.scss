@@ -1,10 +1,5 @@
 @use '../../styles/vars';
 
-main {
-    padding-bottom: 500px;
-    overflow: hidden;
-}
-
 /* dark theme for the Home page */
 body.dark-theme {
     --intro-bg-color: rgba(20, 20, 20, 0.85);

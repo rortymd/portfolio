@@ -7,7 +7,7 @@ import './Bio.scss';
 gsap.registerPlugin(scrollTrigger);
 
 const heyLetters = gsap.utils.toArray('.bio__title-hey span');
-const paragraphs = gsap.utils.toArray('.bio__title .paragraph span');
+const paragraphs = gsap.utils.toArray('.bio__paragraph span');
 
 const screenWidth = document.querySelector('.bio__title').offsetWidth;
 

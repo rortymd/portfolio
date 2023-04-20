@@ -1,6 +1,6 @@
 let colorTheme;
 
-/* get the current color theme from the local storage | create one if it doesn't exist */
+/* get the current color theme from the local storage || create one if it doesn't exist */
 if (!localStorage.getItem('color-theme')) {
     localStorage.setItem('color-theme', 'dark-theme');
     colorTheme = 'dark-theme';
