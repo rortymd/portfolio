@@ -14,7 +14,7 @@ import 'Components/smoothSlideIn/smoothSlideIn';
 import 'Sections/Header/Header';
 import './homeSections/Intro/Intro';
 import './homeSections/Bio/Bio';
-import './homeSections/Freelance/Freelance.scss';
+import './homeSections/Info/Info.scss';
 import 'Sections/Footer/Footer.scss';
 
 balanceText('.title, .subtitle, .paragraph, .list__item', { watch: true });

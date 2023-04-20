@@ -1,7 +1,10 @@
 @use '../../../../styles/vars';
 
+.freelance {
+    margin-bottom: 75px;
+}
+
 .freelance__inner {
-    .subtitle,
     .list {
         margin-bottom: vars.$mg;
     }

@@ -29,6 +29,7 @@
 .subtitle {
     @include text;
 
+    margin-bottom: vars.$mg;
     font-size: 22px;
     font-weight: 500;
 }

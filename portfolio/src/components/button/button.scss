@@ -42,13 +42,11 @@
     }
 }
 
-/* icon for the external link */
-.btn--ext-link {
+@mixin btnIcon {
     padding-right: 35px;
 
     &::after {
         width: 15px;
-        transform: translate3d(0, 50%, 0);
         opacity: 0;
         transition: vars.$transition;
         position: absolute;
@@ -61,6 +59,26 @@
             transform: translate3d(0, 0, 0);
             opacity: 1;
         }
+    }
+}
+
+/* external link icon */
+.btn--ext-link {
+    @include btnIcon;
+
+    /* slide in direction */
+    &::after {
+        transform: translate3d(0, 50%, 0);
+    }
+}
+
+/* download icon */
+.btn--download {
+    @include btnIcon;
+
+    /* slide in direction */
+    &::after {
+        transform: translate3d(0, -50%, 0);
     }
 }
 
@@ -100,7 +118,7 @@ body.dark-theme {
         }
     }
 
-    /* icon for the external link */
+    /* external link icon */
     .btn--ext-link {
         &::after {
             content: url('../images/icons/ext-link-light.svg');
@@ -112,8 +130,22 @@ body.dark-theme {
             }
         }
     }
+
+    /* download icon */
+    .btn--download {
+        &::after {
+            content: url('../images/icons/download-light.svg');
+        }
+
+        &.btn--alt {
+            &::after {
+                content: url('../images/icons/download-dark.svg');
+            }
+        }
+    }
 }
 
+/* light website theme */
 body.light-theme {
     /* main button styles */
     .btn {
@@ -149,7 +181,7 @@ body.light-theme {
         }
     }
 
-    /* icon for the external link */
+    /* external link icon */
     .btn--ext-link {
         &::after {
             content: url('../images/icons/ext-link-dark.svg');
@@ -158,6 +190,19 @@ body.light-theme {
         &.btn--alt {
             &::after {
                 content: url('../images/icons/ext-link-light.svg');
+            }
+        }
+    }
+
+    /* download icon */
+    .btn--download {
+        &::after {
+            content: url('../images/icons/download-dark.svg');
+        }
+
+        &.btn--alt {
+            &::after {
+                content: url('../images/icons/download-light.svg');
             }
         }
     }
