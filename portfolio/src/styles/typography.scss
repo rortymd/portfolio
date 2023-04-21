@@ -40,11 +40,15 @@
 
     font-size: 18px;
     font-weight: 400;
+
+    &.paragraph--sm {
+        font-size: 14px;
+    }
 }
 
 /* <ul> */
 .list {
-    padding-left: 20px;
+    padding-left: 23px;
 }
 
 /* <li> */

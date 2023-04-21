@@ -48,7 +48,7 @@ body {
     }
 }
 
-main {
+.main {
     padding-bottom: 100px;
     overflow: hidden;
 }
@@ -69,6 +69,17 @@ main {
 .os-scrollbar {
     --os-size: 8px;
     --os-padding-perpendicular: 0px;
+}
+
+/* <svg> wrapper for the icons inserted via <use> */
+.icon {
+    width: 16px;
+    height: 16px;
+
+    &.icon--lg {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 /* SCREEN ADAPTATION */

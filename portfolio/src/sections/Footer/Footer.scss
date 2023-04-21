@@ -1,0 +1,14 @@
+@use '../../styles/vars';
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    padding: vars.$mg 0 vars.$mg-lg;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.footer__copyright {
+    display: flex;
+    align-items: center;
+    column-gap: vars.$mg-sm;
+}
