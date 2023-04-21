@@ -30,31 +30,30 @@ gsap.timeline({
     scrollTrigger: {
         trigger: '.bio__title',
         start: '50px 70%',
-        end: '+=300 100%',
-        scrub: 10,
-        markers: true,
+        end: '+=500 100%',
+        scrub: 2,
     },
 })
     .to(heyLetters, {
         scale: 1,
         opacity: 1,
-        stagger: 0.15,
-        delay: 0.15,
+        stagger: 0.5,
+        delay: 0.5,
         ease: 'power4.out',
     })
     .to(
         heyLetters,
         {
             x: 0,
-            stagger: 0.15,
-            delay: 0.15,
+            stagger: 0.5,
+            delay: 0.5,
         },
         '<'
     )
     .to(paragraphs, {
         x: 0,
         opacity: 1,
-        stagger: 0.15,
-        delay: 0.15,
+        stagger: 1,
+        delay: 0.5,
         ease: 'power4.out',
     });
