@@ -15,7 +15,7 @@ heyLetters.forEach((span) => {
     gsap.set(span, {
         x: () => screenWidth / 2 - span.offsetLeft,
         opacity: 0,
-        scale: 10,
+        scale: 3,
     });
 });
 
@@ -29,29 +29,32 @@ paragraphs.forEach((span) => {
 gsap.timeline({
     scrollTrigger: {
         trigger: '.bio__title',
-        start: '50px 90%',
-        end: '+=600 100%',
-        scrub: 2,
+        start: '50px 70%',
+        end: '+=300 100%',
+        scrub: 10,
+        markers: true,
     },
 })
     .to(heyLetters, {
         scale: 1,
         opacity: 1,
-        stagger: 0.5,
-        delay: 0.5,
+        stagger: 0.15,
+        delay: 0.15,
+        ease: 'power4.out',
     })
     .to(
         heyLetters,
         {
             x: 0,
-            stagger: 0.5,
-            delay: 0.5,
+            stagger: 0.15,
+            delay: 0.15,
         },
         '<'
     )
     .to(paragraphs, {
         x: 0,
         opacity: 1,
-        stagger: 0.5,
-        delay: 0.5,
+        stagger: 0.15,
+        delay: 0.15,
+        ease: 'power4.out',
     });
