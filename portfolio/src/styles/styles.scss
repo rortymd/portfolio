@@ -73,12 +73,28 @@ body {
 
 /* <svg> wrapper for the icons inserted via <use> */
 .icon {
-    width: 16px;
-    height: 16px;
+    display: block;
+    width: 18px;
+    height: 18px;
 
     &.icon--lg {
-        width: 24px;
-        height: 24px;
+        width: 32px;
+        height: 32px;
+    }
+
+    &.icon--link {
+        opacity: 0.75;
+        transition: vars.$transition;
+        transition-property: opacity, transform;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
     }
 }
 

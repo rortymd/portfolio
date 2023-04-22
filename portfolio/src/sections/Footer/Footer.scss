@@ -2,6 +2,7 @@
 
 .footer__inner {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: vars.$mg 0 vars.$mg-lg;
     border-top: 1px solid var(--secondary-color);
@@ -11,4 +12,18 @@
     display: flex;
     align-items: center;
     column-gap: vars.$mg-sm;
+}
+
+.footer__social {
+    display: flex;
+    column-gap: vars.$mg;
+}
+
+/* SCREEN ADAPTATION */
+/* tablets */
+@media (max-width: vars.$tablet) {
+    .footer__inner {
+        flex-direction: column-reverse;
+        row-gap: vars.$mg-lg;
+    }
 }

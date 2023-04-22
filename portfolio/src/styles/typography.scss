@@ -48,7 +48,7 @@
 
 /* <ul> */
 .list {
-    padding-left: 23px;
+    // padding-left: 23px;
 }
 
 /* <li> */
@@ -57,12 +57,13 @@
 
     max-width: 50%;
     margin-bottom: 5px;
-    padding-left: 5px;
+    padding-left: 30px;
+    background-image: url('../images/icons/check-circle.svg');
+    background-repeat: no-repeat;
+    background-position: left 5px;
+    background-size: 18px;
     font-size: 18px;
     font-weight: 500;
-    list-style-type: circle;
-    list-style-position: outside;
-    list-style-image: url('../images/icons/check-circle.svg');
 }
 
 /* SCREEN ADAPTATION */
