@@ -2,7 +2,6 @@
 
 @mixin text {
     color: var(--secondary-color);
-    text-shadow: 0 0 1px rgba(vars.$black, 0.15);
     transition: vars.$transition;
     transition-property: color;
     letter-spacing: 1px;
@@ -44,11 +43,6 @@
     &.paragraph--sm {
         font-size: 14px;
     }
-}
-
-/* <ul> */
-.list {
-    // padding-left: 23px;
 }
 
 /* <li> */

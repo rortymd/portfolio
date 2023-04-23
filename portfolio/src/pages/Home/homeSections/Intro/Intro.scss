@@ -27,7 +27,7 @@
 
     .my-carousel-progress-bar {
         width: 0;
-        height: 4px;
+        height: 5px;
         background-color: vars.$red;
         transition: width vars.$transition;
     }
@@ -38,7 +38,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    min-height: calc(100vh - 4px);
+    min-height: calc(100vh - 5px);
 }
 
 /* background image */
@@ -152,6 +152,6 @@
 
     /* item info */
     .intro-item__info {
-        padding: 250px 0px;
+        padding: 250px 0px 200px;
     }
 }

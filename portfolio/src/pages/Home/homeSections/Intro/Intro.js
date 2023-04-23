@@ -7,6 +7,7 @@ import './Intro.scss';
 
 /* carousel */
 const splide = new Splide('.intro.splide', {
+    type: 'loop',
     pagination: false,
     autoplay: true,
 });
