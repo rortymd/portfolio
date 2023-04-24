@@ -61,6 +61,20 @@ module.exports = merge(common, {
                 parallel: true,
             }),
         ],
+        splitChunks: {
+            chunks: 'all',
+            minSize: 500000,
+            minSizeReduction: 1000,
+            name: 'shared'
+            // cacheGroups: {
+            //     type: 'css/mini-extract',
+            //     name: 'styles_reused',
+            //     chunks: (chunk) => {
+            //         return chunk.name === 'styles';
+            //     },
+            //     enforce: true,
+            // },
+        },
     },
     plugins: [
         new MiniCssExtractPlugin({
