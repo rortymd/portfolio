@@ -36,8 +36,9 @@
 /* emoji */
 .bio__emoji {
     display: block;
-    width: 80px;
-    transform: translateY(35%);
+    width: 60px;
+    margin-left: vars.$mg-sm;
+    transform: translateY(25%);
 }
 
 /* paragraph */
