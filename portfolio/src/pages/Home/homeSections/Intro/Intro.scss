@@ -67,6 +67,7 @@
 
     .container {
         display: flex;
+        justify-content: space-between;
         align-items: flex-start;
     }
 }
@@ -78,19 +79,15 @@
 
 /* wrapper for the links */
 .intro-item__links {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: vars.$mg;
     margin-top: auto;
 }
 
 /* single item's link */
 .intro__link {
-    display: block;
-    width: 250px;
-    margin-left: auto;
-
-    &:first-child {
-        margin-bottom: 20px;
-    }
+    width: 100%;
 }
 
 /* SCREEN ADAPTATION */
@@ -135,6 +132,7 @@
     /* single item's link */
     .intro__link {
         margin-right: auto;
+        margin-left: auto;
     }
 }
 

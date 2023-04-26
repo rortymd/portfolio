@@ -63,7 +63,7 @@ module.exports = merge(common, {
         ],
         splitChunks: {
             chunks: 'all',
-            name: 'libraries',
+            name: 'shared',
         },
     },
     plugins: [

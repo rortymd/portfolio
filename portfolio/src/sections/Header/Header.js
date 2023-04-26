@@ -1,6 +1,8 @@
 // styles
 import './Header.scss';
+// components
 import './theme-toggler/theme-toggler';
+import './theme-toggler/theme-toggler.scss'
 
 /* dom elements */
 const navButton = document.querySelector('.header__nav-btn');
@@ -29,7 +31,7 @@ function showNav() {
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'hidden');
         // hide the scrollbar
-        document.querySelector('.os-scrollbar-vertical').style.opacity = 0;
+        document.querySelector('body > .os-scrollbar-vertical').style.opacity = 0;
     }
 }
 
@@ -53,7 +55,7 @@ function hideNav() {
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'scroll');
         // show the scrollbar
-        document.querySelector('.os-scrollbar-vertical').style.opacity = 1;
+        document.querySelector('body > .os-scrollbar-vertical').style.opacity = 1;
     }
 }
 

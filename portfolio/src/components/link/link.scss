@@ -37,3 +37,11 @@
         opacity: 0.5;
     }
 }
+
+/* SCREEN ADAPTATION */
+/* mobile phones */
+@media (max-width: vars.$phone) {
+    .link {
+        font-size: 16px;
+    }
+}
