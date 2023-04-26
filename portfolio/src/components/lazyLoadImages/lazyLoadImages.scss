@@ -1,9 +1,9 @@
+@use '../../styles/vars';
+
 .image {
-    background-color: #dddddd;
-    border: 2px solid #333333;
+    background-color: #d9d9d9;
+    border: 4px solid #141414;
     border-radius: 8px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
     position: relative;
 
     &::before {
@@ -13,23 +13,11 @@
         background-image: url('./img/image-placeholder.svg');
         background-size: cover;
         transform: translate(-50%, -50%);
-        opacity: 0.8;
         aspect-ratio: 1 / 1;
         position: absolute;
         top: 50%;
         left: 50%;
         z-index: 1;
-    }
-
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(100deg, transparent 45%, rgba(245, 245, 245, 0.75) 50%, transparent 55%);
-        animation: lazyImage 3s linear infinite;
-        position: absolute;
-        top: 0;
-        z-index: 2;
     }
 
     &.image-loaded {
@@ -38,9 +26,12 @@
         border-radius: 0;
         box-shadow: none;
 
-        &::before,
-        &::after {
+        &::before {
             display: none;
+        }
+
+        .lazy-image {
+            opacity: 1;
         }
     }
 }
@@ -48,6 +39,9 @@
 .lazy-image {
     display: block;
     width: 100%;
+    opacity: 0;
+    transition: vars.$transition;
+    transition-property: opacity;
     position: relative;
     z-index: 3;
 }
