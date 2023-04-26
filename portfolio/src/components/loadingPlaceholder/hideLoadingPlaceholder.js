@@ -1,6 +1,6 @@
 const hideLoadingPlaceholder = () => {
     const body = document.body;
-    body.style.overflow = 'auto';
+    body.style.overflow = 'visible';
 
     const loader = document.querySelector('.loadingPlaceholder');
     loader.classList.add('loadingPlaceholder-hidden');

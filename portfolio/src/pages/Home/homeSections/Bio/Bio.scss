@@ -11,7 +11,6 @@
         display: inline-block;
         color: var(--secondary-color);
         letter-spacing: 1px;
-        text-shadow: 0 0 1px rgba(vars.$black, 0.15);
         transition: vars.$transition;
         transition-property: color;
     }

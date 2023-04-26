@@ -17,3 +17,4 @@ Useful services:
 5. SVG editor - https://boxy-svg.com/
 6. Color palette - https://palettes.shecodes.io/palettes/659#palette
 7. Color theme switcher icons - https://toggles.dev/
+8. Loading placeholders - https://loading.io/css/
