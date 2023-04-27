@@ -5,66 +5,64 @@ import '@splidejs/splide/css';
 // styles
 import './Intro.scss';
 
-window.addEventListener('DOMContentLoaded', () => {
-    /* carousel */
-    const splide = new Splide('.intro.splide', {
-        type: 'loop',
-        pagination: false,
-        autoplay: true,
+/* carousel */
+const splide = new Splide('.intro.splide', {
+    type: 'loop',
+    pagination: false,
+    autoplay: true,
+});
+
+const progressBar = splide.root.querySelector('.my-carousel-progress-bar');
+
+splide.on('mounted move', () => {
+    const end = splide.Components.Controller.getEnd() + 1;
+    const rate = Math.min((splide.index + 1) / end, 1);
+    progressBar.style.width = String(100 * rate) + '%';
+});
+
+splide.mount();
+
+/* smooth appearance */
+// observer
+const introItems = document.querySelectorAll('.intro-item');
+
+const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const intro = entry.target;
+
+            intro.timeline.play();
+
+            observer.unobserve(intro);
+        }
     });
+};
 
-    const progressBar = splide.root.querySelector('.my-carousel-progress-bar');
+const observerOptions = {
+    threshold: 0.5,
+};
 
-    splide.on('mounted move', () => {
-        const end = splide.Components.Controller.getEnd() + 1;
-        const rate = Math.min((splide.index + 1) / end, 1);
-        progressBar.style.width = String(100 * rate) + '%';
-    });
+// animations
+introItems.forEach((item) => {
+    const infoWrapper = item.querySelector('.intro-item__descr');
+    const linksWrapper = item.querySelector('.intro-item__links');
 
-    splide.mount();
-
-    /* smooth appearance */
-    // observer
-    const introItems = document.querySelectorAll('.intro-item');
-
-    const observerCallback = (entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const intro = entry.target;
-
-                intro.timeline.play();
-
-                observer.unobserve(intro);
-            }
+    const action = gsap
+        .timeline({ paused: true })
+        .from(infoWrapper, {
+            y: 100,
+            opacity: 0,
+            duration: 0.75,
+        })
+        .from(linksWrapper, {
+            y: 100,
+            opacity: 0,
+            duration: 0.5,
         });
-    };
 
-    const observerOptions = {
-        threshold: 0.5,
-    };
+    item.timeline = action;
 
-    // animations
-    introItems.forEach((item) => {
-        const infoWrapper = item.querySelector('.intro-item__descr');
-        const linksWrapper = item.querySelector('.intro-item__links');
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-        const action = gsap
-            .timeline({ paused: true })
-            .from(infoWrapper, {
-                y: 100,
-                opacity: 0,
-                duration: 0.75,
-            })
-            .from(linksWrapper, {
-                y: 100,
-                opacity: 0,
-                duration: 0.5,
-            });
-
-        item.timeline = action;
-
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-        observer.observe(item);
-    });
+    observer.observe(item);
 });
