@@ -16,9 +16,8 @@ import './homeSections/Bio/Bio';
 import './homeSections/Info/Info.scss';
 import 'Sections/Footer/Footer.scss';
 
-balanceText('.title, .subtitle, .paragraph, .list__item', { watch: true });
-
 window.addEventListener('DOMContentLoaded', () => {
-    hideLoadingPlaceholder();
     lazyLoadImages();
+    balanceText('.title, .subtitle, .paragraph, .list__item', { watch: true });
+    hideLoadingPlaceholder();
 });
