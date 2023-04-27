@@ -1,6 +1,6 @@
 import './smoothSlideIn.scss';
 
-setTimeout(() => {
+window.addEventListener('DOMContentLoaded', () => {
     // .slide-in-trigger is the element which will be used for the IntersectionObserver to work (could be a parent node)
     const elems = document.querySelectorAll('.slide-in-trigger');
 
@@ -25,4 +25,4 @@ setTimeout(() => {
     const observer = new IntersectionObserver(callback, options);
 
     elems.forEach((elem) => observer.observe(elem));
-}, 150);
+});

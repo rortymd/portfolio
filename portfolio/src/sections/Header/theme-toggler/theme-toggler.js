@@ -1,4 +1,4 @@
-setTimeout(() => {
+window.addEventListener('DOMContentLoaded', () => {
     /* dom elements */
     const body = document.body;
     // toggle theme button
@@ -51,4 +51,4 @@ setTimeout(() => {
         // save the color theme value to the local storage
         localStorage.setItem('color-theme', colorTheme);
     });
-}, 150);
+});

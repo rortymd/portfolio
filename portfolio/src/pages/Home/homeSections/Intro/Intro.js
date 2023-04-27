@@ -5,7 +5,7 @@ import '@splidejs/splide/css';
 // styles
 import './Intro.scss';
 
-setTimeout(() => {
+window.addEventListener('DOMContentLoaded', () => {
     /* carousel */
     const splide = new Splide('.intro.splide', {
         type: 'loop',
@@ -67,4 +67,4 @@ setTimeout(() => {
 
         observer.observe(item);
     });
-}, 150);
+});

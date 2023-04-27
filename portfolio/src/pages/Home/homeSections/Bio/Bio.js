@@ -4,7 +4,7 @@ import scrollTrigger from 'gsap/ScrollTrigger';
 // styles
 import './Bio.scss';
 
-setTimeout(() => {
+window.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(scrollTrigger);
 
     const heyLetters = gsap.utils.toArray('.bio__title-hey span');
@@ -46,4 +46,4 @@ setTimeout(() => {
             delay: 0.5,
             ease: 'power4.out',
         });
-}, 150);
+});
