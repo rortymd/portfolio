@@ -5,64 +5,66 @@ import '@splidejs/splide/css';
 // styles
 import './Intro.scss';
 
-/* carousel */
-const splide = new Splide('.intro.splide', {
-    type: 'loop',
-    pagination: false,
-    autoplay: true,
-});
-
-const progressBar = splide.root.querySelector('.my-carousel-progress-bar');
-
-splide.on('mounted move', () => {
-    const end = splide.Components.Controller.getEnd() + 1;
-    const rate = Math.min((splide.index + 1) / end, 1);
-    progressBar.style.width = String(100 * rate) + '%';
-});
-
-splide.mount();
-
-/* smooth appearance */
-// observer
-const introItems = document.querySelectorAll('.intro-item');
-
-const observerCallback = (entries, observer) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            const intro = entry.target;
-
-            intro.timeline.play();
-
-            observer.unobserve(intro);
-        }
+setTimeout(() => {
+    /* carousel */
+    const splide = new Splide('.intro.splide', {
+        type: 'loop',
+        pagination: false,
+        autoplay: true,
     });
-};
 
-const observerOptions = {
-    threshold: 0.5,
-};
+    const progressBar = splide.root.querySelector('.my-carousel-progress-bar');
 
-// animations
-introItems.forEach((item) => {
-    const infoWrapper = item.querySelector('.intro-item__descr');
-    const linksWrapper = item.querySelector('.intro-item__links');
+    splide.on('mounted move', () => {
+        const end = splide.Components.Controller.getEnd() + 1;
+        const rate = Math.min((splide.index + 1) / end, 1);
+        progressBar.style.width = String(100 * rate) + '%';
+    });
 
-    const action = gsap
-        .timeline({ paused: true })
-        .from(infoWrapper, {
-            y: 100,
-            opacity: 0,
-            duration: 0.75,
-        })
-        .from(linksWrapper, {
-            y: 100,
-            opacity: 0,
-            duration: 0.5,
+    splide.mount();
+
+    /* smooth appearance */
+    // observer
+    const introItems = document.querySelectorAll('.intro-item');
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const intro = entry.target;
+
+                intro.timeline.play();
+
+                observer.unobserve(intro);
+            }
         });
+    };
 
-    item.timeline = action;
+    const observerOptions = {
+        threshold: 0.5,
+    };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    // animations
+    introItems.forEach((item) => {
+        const infoWrapper = item.querySelector('.intro-item__descr');
+        const linksWrapper = item.querySelector('.intro-item__links');
 
-    observer.observe(item);
-});
+        const action = gsap
+            .timeline({ paused: true })
+            .from(infoWrapper, {
+                y: 100,
+                opacity: 0,
+                duration: 0.75,
+            })
+            .from(linksWrapper, {
+                y: 100,
+                opacity: 0,
+                duration: 0.5,
+            });
+
+        item.timeline = action;
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        observer.observe(item);
+    });
+}, 500);
