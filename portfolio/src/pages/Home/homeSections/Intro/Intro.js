@@ -5,8 +5,8 @@ import '@splidejs/splide/css';
 // styles
 import './Intro.scss';
 
+/* carousel */
 setTimeout(() => {
-    /* carousel */
     const splide = new Splide('.intro.splide', {
         type: 'loop',
         pagination: false,
@@ -22,8 +22,10 @@ setTimeout(() => {
     });
 
     splide.mount();
+}, 100);
 
-    /* smooth appearance */
+/* smooth appearance */
+setTimeout(() => {
     // observer
     const introItems = document.querySelectorAll('.intro-item');
 
@@ -67,4 +69,4 @@ setTimeout(() => {
 
         observer.observe(item);
     });
-}, 500);
+}, 100);
