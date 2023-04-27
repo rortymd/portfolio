@@ -3,8 +3,9 @@
 /* section margin bottom */
 .bio {
     margin-bottom: 150px;
-    animation: showBio 1s forwards;
     opacity: 0;
+    transition: vars.$transition;
+    transition-property: opacity;
 }
 
 /* section text styles */
@@ -50,11 +51,5 @@
 
     &:last-child {
         margin-bottom: 0;
-    }
-}
-
-@keyframes showBio {
-    to {
-        opacity: 1;
     }
 }

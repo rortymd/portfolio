@@ -1,5 +1,9 @@
 @use '../../styles/vars';
 
+.footer {
+    margin-top: auto;
+}
+
 .footer__inner {
     display: flex;
     justify-content: space-between;

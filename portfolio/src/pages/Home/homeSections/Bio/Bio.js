@@ -5,6 +5,10 @@ import scrollTrigger from 'gsap/ScrollTrigger';
 import './Bio.scss';
 
 setTimeout(() => {
+    // show the section
+    document.querySelector('.bio').style.opacity = 1;
+
+    // scroll triggered animation
     gsap.registerPlugin(scrollTrigger);
 
     const heyLetters = gsap.utils.toArray('.bio__title-hey span');
