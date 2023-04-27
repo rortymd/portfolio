@@ -3,6 +3,8 @@
 /* section margin bottom */
 .bio {
     margin-bottom: 150px;
+    animation: showBio 0.35s forwards;
+    opacity: 0;
 }
 
 /* section text styles */
@@ -48,5 +50,11 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+@keyframes showBio {
+    to {
+        opacity: 1;
     }
 }
