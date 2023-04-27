@@ -123,12 +123,12 @@ body.dark-theme {
     /* external link icon */
     .btn--ext-link {
         &::after {
-            content: url('../images/icons/ext-link-light.svg');
+            // content: url('../images/icons/ext-link-light.svg');
         }
 
         &.btn--alt {
             &::after {
-                content: url('../images/icons/ext-link-dark.svg');
+                // content: url('../images/icons/ext-link-dark.svg');
             }
         }
     }
@@ -136,12 +136,12 @@ body.dark-theme {
     /* download icon */
     .btn--download {
         &::after {
-            content: url('../images/icons/download-light.svg');
+            // content: url('../images/icons/download-light.svg');
         }
 
         &.btn--alt {
             &::after {
-                content: url('../images/icons/download-dark.svg');
+                // content: url('../images/icons/download-dark.svg');
             }
         }
     }
@@ -186,12 +186,12 @@ body.light-theme {
     /* external link icon */
     .btn--ext-link {
         &::after {
-            content: url('../images/icons/ext-link-dark.svg');
+            // content: url('../images/icons/ext-link-dark.svg');
         }
 
         &.btn--alt {
             &::after {
-                content: url('../images/icons/ext-link-light.svg');
+                // content: url('../images/icons/ext-link-light.svg');
             }
         }
     }
@@ -199,12 +199,12 @@ body.light-theme {
     /* download icon */
     .btn--download {
         &::after {
-            content: url('../images/icons/download-dark.svg');
+            // content: url('../images/icons/download-dark.svg');
         }
 
         &.btn--alt {
             &::after {
-                content: url('../images/icons/download-light.svg');
+                // content: url('../images/icons/download-light.svg');
             }
         }
     }
