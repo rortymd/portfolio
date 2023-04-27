@@ -46,4 +46,4 @@ setTimeout(() => {
             delay: 0.5,
             ease: 'power4.out',
         });
-}, 50);
+}, 150);

@@ -67,4 +67,4 @@ setTimeout(() => {
 
         observer.observe(item);
     });
-}, 50);
+}, 150);
