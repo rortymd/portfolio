@@ -2,101 +2,89 @@
 import './Header.scss';
 // components
 import './theme-toggler/theme-toggler';
-import './theme-toggler/theme-toggler.scss'
+import './theme-toggler/theme-toggler.scss';
 
-/* dom elements */
-const navButton = document.querySelector('.header__nav-btn');
-const navList = document.querySelector('.header__links-list');
-const navElems = document.querySelectorAll('.header__list-item > *');
+setTimeout(() => {
+    /* dom elements */
+    const navButton = document.querySelector('.header__nav-btn');
+    const navList = document.querySelector('.header__links-list');
+    const navElems = document.querySelectorAll('.header__list-item > *');
 
-/* show/hide the navigation menu */
-// navigation status
-let navActive = false;
+    /* show/hide the navigation menu */
+    // navigation status
+    let navActive = false;
 
-function showNav() {
-    // toggle navigation status
-    navActive = true;
+    function showNav() {
+        // toggle navigation status
+        navActive = true;
 
-    // add the "active" classes
-    navButton.classList.add('header__nav-btn--active');
-    navList.classList.add('header__links-list--active');
+        // add the "active" classes
+        navButton.classList.add('header__nav-btn--active');
+        navList.classList.add('header__links-list--active');
 
-    // set the css "visibility" property
-    navList.style.visibility = 'visible';
+        // set the css "visibility" property
+        navList.style.visibility = 'visible';
 
-    // prevent scrolling (mobile devices)
-    document.body.classList.add('no-scroll');
-
-    // prevent scrolling (desktop)
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'hidden');
-        // hide the scrollbar
-        document.querySelector('body > .os-scrollbar-vertical').style.opacity = 0;
+        // prevent scrolling
+        document.body.classList.add('no-scroll');
     }
-}
 
-function hideNav() {
-    // toggle navigation status
-    navActive = false;
+    function hideNav() {
+        // toggle navigation status
+        navActive = false;
 
-    // remove the "active" classes
-    navButton.classList.remove('header__nav-btn--active');
-    navList.classList.remove('header__links-list--active');
+        // remove the "active" classes
+        navButton.classList.remove('header__nav-btn--active');
+        navList.classList.remove('header__links-list--active');
 
-    // set the css "visibility" property
-    setTimeout(() => {
-        navList.style.visibility = 'hidden';
-    }, 350);
-
-    // allow scrolling (mobile devices)
-    document.body.classList.remove('no-scroll');
-
-    // allow scrolling (desktop)
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.querySelector('html').setAttribute('data-overlayscrollbars-overflow-y', 'scroll');
-        // show the scrollbar
-        document.querySelector('body > .os-scrollbar-vertical').style.opacity = 1;
-    }
-}
-
-// handle click on the burger menu button
-navButton.addEventListener('click', () => {
-    if (!navActive) {
-        showNav();
-        showLinks();
-    } else {
-        hideNav();
+        // set the css "visibility" property
         setTimeout(() => {
-            hideLinks();
+            navList.style.visibility = 'hidden';
         }, 350);
+
+        // allow scrolling
+        document.body.classList.remove('no-scroll');
     }
-});
 
-/* manage the links' tab index */
-function showLinks() {
-    navElems.forEach((link) => {
-        link.style.visibility = 'visible';
-    });
-}
-
-function hideLinks() {
-    navElems.forEach((link) => {
-        link.style.visibility = 'hidden';
-    });
-}
-
-if (window.innerWidth <= 1024) {
-    hideLinks();
-}
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 1024) {
-        if (navActive) {
-            hideNav();
-        } else {
+    // handle click on the burger menu button
+    navButton.addEventListener('click', () => {
+        if (!navActive) {
+            showNav();
             showLinks();
+        } else {
+            hideNav();
+            setTimeout(() => {
+                hideLinks();
+            }, 350);
         }
-    } else if (window.innerWidth <= 1024 && !navActive) {
+    });
+
+    /* manage the links' tab index */
+    function showLinks() {
+        navElems.forEach((link) => {
+            link.style.visibility = 'visible';
+        });
+    }
+
+    function hideLinks() {
+        navElems.forEach((link) => {
+            link.style.visibility = 'hidden';
+        });
+    }
+
+    if (window.innerWidth <= 1024) {
         hideLinks();
     }
-});
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024) {
+            if (navActive) {
+                hideNav();
+            } else {
+                showLinks();
+            }
+        } else if (window.innerWidth <= 1024 && !navActive) {
+            hideLinks();
+        }
+    });
+}, 150);

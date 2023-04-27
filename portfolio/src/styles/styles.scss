@@ -25,6 +25,7 @@
 }
 
 body {
+    background-color: var(--main-color);
     background-size: cover;
 
     &.dark-theme {
