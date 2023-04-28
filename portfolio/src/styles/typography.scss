@@ -3,7 +3,7 @@
 @mixin text {
     color: var(--secondary-color);
     transition: vars.$transition;
-    transition-property: color;
+    transition-property: color, opacity;
     letter-spacing: 1px;
 
     &:last-child {
@@ -16,6 +16,7 @@
     @include text;
 
     margin-bottom: 5px;
+    opacity: 0;
     font-size: 36px;
     font-weight: 700;
 
@@ -29,6 +30,7 @@
     @include text;
 
     margin-bottom: vars.$mg;
+    opacity: 0;
     font-size: 22px;
     font-weight: 500;
 }
@@ -37,6 +39,7 @@
 .paragraph {
     @include text;
 
+    opacity: 0;
     font-size: 18px;
     font-weight: 400;
 
@@ -56,6 +59,7 @@
     background-repeat: no-repeat;
     background-position: left 5px;
     background-size: 18px;
+    opacity: 0;
     font-size: 18px;
     font-weight: 500;
 }

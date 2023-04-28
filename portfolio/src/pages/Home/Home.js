@@ -18,6 +18,15 @@ import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
     lazyLoadImages();
-    // balanceText('.title, .subtitle, .paragraph, .list__item', { watch: true });
     hideLoadingPlaceholder();
 });
+
+setTimeout(() => {
+    const textNodes = '.title, .subtitle, .paragraph, .list__item';
+
+    balanceText(textNodes, { watch: true });
+
+    document.querySelectorAll(textNodes).forEach((text) => {
+        text.style.opacity = 1;
+    });
+}, 100);
