@@ -43,8 +43,6 @@
     },
     "dependencies": {
         "@splidejs/splide": "^4.1.4",
-        "balance-text": "^3.3.1",
-        "gsap": "^3.11.5",
-        "overlayscrollbars": "^2.1.1"
+        "gsap": "^3.11.5"
     }
 }

@@ -4,7 +4,7 @@ import scrollTrigger from 'gsap/ScrollTrigger';
 // styles
 import './Bio.scss';
 
-setTimeout(() => {
+// setTimeout(() => {
     // show the section
     document.querySelector('.bio').style.opacity = 1;
 
@@ -50,4 +50,4 @@ setTimeout(() => {
             delay: 0.5,
             ease: 'power4.out',
         });
-}, 500);
+// }, 500);

@@ -4,7 +4,7 @@ import './Header.scss';
 import './theme-toggler/theme-toggler';
 import './theme-toggler/theme-toggler.scss';
 
-setTimeout(() => {
+// setTimeout(() => {
     /* dom elements */
     const navButton = document.querySelector('.header__nav-btn');
     const navList = document.querySelector('.header__links-list');
@@ -81,4 +81,4 @@ setTimeout(() => {
             hideLinks();
         }
     });
-}, 1000);
+// }, 1000);

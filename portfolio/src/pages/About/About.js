@@ -1,5 +1,3 @@
-// libraries
-import balanceText from 'balance-text';
 // styles
 import 'modern-normalize/modern-normalize.css';
 import 'Src/styles/styles.scss';
@@ -11,8 +9,6 @@ import 'Components/smoothSlideIn/smoothSlideIn';
 // sections
 import 'Sections/Header/Header';
 import 'Sections/Footer/Footer.scss';
-
-balanceText('.title, .subtitle, .paragraph, .list__item', { watch: true });
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoadingPlaceholder();
