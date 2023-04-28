@@ -24,9 +24,6 @@ setTimeout(() => {
 
         // set the css "visibility" property
         navList.style.visibility = 'visible';
-
-        // prevent scrolling
-        document.body.classList.add('no-scroll');
     }
 
     function hideNav() {
@@ -41,9 +38,6 @@ setTimeout(() => {
         setTimeout(() => {
             navList.style.visibility = 'hidden';
         }, 350);
-
-        // allow scrolling
-        document.body.classList.remove('no-scroll');
     }
 
     // handle click on the burger menu button

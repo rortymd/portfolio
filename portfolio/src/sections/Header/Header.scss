@@ -115,6 +115,7 @@
         background-color: var(--main-color-alpha);
         opacity: 0;
         transition: vars.$transition;
+        transition-property: opacity;
         visibility: hidden;
         position: fixed;
         top: 0;

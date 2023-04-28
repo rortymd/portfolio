@@ -32,11 +32,11 @@ setTimeout(() => {
     const observerCallback = (entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                const intro = entry.target;
+                const introItem = entry.target;
 
-                intro.timeline.play();
+                introItem.timeline.play();
 
-                observer.unobserve(intro);
+                observer.unobserve(introItem);
             }
         });
     };
@@ -52,14 +52,14 @@ setTimeout(() => {
 
         const action = gsap
             .timeline({ paused: true })
-            .from(infoWrapper, {
-                y: 100,
-                opacity: 0,
+            .to(infoWrapper, {
+                y: 0,
+                opacity: 1,
                 duration: 0.75,
             })
-            .from(linksWrapper, {
-                y: 100,
-                opacity: 0,
+            .to(linksWrapper, {
+                y: 0,
+                opacity: 1,
                 duration: 0.5,
             });
 
@@ -69,4 +69,4 @@ setTimeout(() => {
 
         observer.observe(item);
     });
-}, 100);
+}, 750);

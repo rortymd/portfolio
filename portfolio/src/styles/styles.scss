@@ -24,6 +24,33 @@
     line-height: 150%;
 }
 
+/* customize the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* background */
+::-webkit-scrollbar-track {
+    background-color: rgba(vars.$black, 0.25);
+}
+
+/* thumb */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(vars.$white, 0.8);
+    border: 1px solid rgba(vars.$black, 0.8);
+    border-radius: 4px;
+}
+
+/* thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(vars.$white, 0.6);
+}
+
+/* thumb on mouse down */
+::-webkit-scrollbar-thumb:active {
+    background-color: rgba(vars.$white, 0.4);
+}
+
 body {
     display: flex;
     flex-direction: column;
