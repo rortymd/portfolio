@@ -18,6 +18,6 @@ import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
     lazyLoadImages();
-    balanceText('.title, .subtitle, .paragraph, .list__item', { watch: true });
+    // balanceText('.title, .subtitle, .paragraph, .list__item', { watch: true });
     hideLoadingPlaceholder();
 });

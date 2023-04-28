@@ -25,4 +25,4 @@ setTimeout(() => {
     const observer = new IntersectionObserver(callback, options);
 
     elems.forEach((elem) => observer.observe(elem));
-}, 500);
+}, 750);
