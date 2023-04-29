@@ -2,36 +2,19 @@
 
 /* section margin bottom */
 .bio {
-    margin-bottom: 150px;
-    opacity: 0;
-    transition: vars.$transition;
-    transition-property: opacity;
-}
+    margin: 100px 0 200px;
 
-/* section text styles */
-.bio__title {
     span {
         display: inline-block;
-        color: var(--secondary-color);
-        letter-spacing: 1px;
-        transition: vars.$transition;
-        transition-property: color;
     }
 }
 
-/* "Heey" text */
-.bio__title-hey {
-    margin-bottom: 20px;
+.bio__title {
+    margin-bottom: vars.$mg-lg;
+    letter-spacing: -3px;
 
     span {
-        margin-top: 50px;
         font-size: 72px;
-        transform-origin: bottom;
-        pointer-events: none;
-    }
-
-    &::selection {
-        background-color: transparent;
     }
 }
 
@@ -40,16 +23,5 @@
     display: block;
     width: 60px;
     margin-left: vars.$mg-sm;
-    transform: translateY(25%);
-}
-
-/* paragraph */
-.bio__paragraph {
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-weight: 500;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
+    transform: translateY(10%);
 }

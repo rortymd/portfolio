@@ -1,0 +1,38 @@
+@use './vars';
+
+.icon {
+    display: block;
+    width: 18px;
+
+    &.icon--lg {
+        width: 32px;
+    }
+
+    &.icon--link {
+        opacity: 0.5;
+        transition: vars.$transition;
+        transition-property: opacity, transform;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+/* SCREEN ADAPTATION */
+/* mobile phones */
+@media (max-width: vars.$phone) {
+    .icon {
+        width: 16px;
+
+        &.icon--lg {
+            width: 28px;
+        }
+    }
+}
