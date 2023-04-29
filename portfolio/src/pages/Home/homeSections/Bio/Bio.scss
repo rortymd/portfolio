@@ -7,14 +7,10 @@
     span {
         display: inline-block;
     }
-}
 
-.bio__title {
-    margin-bottom: vars.$mg-lg;
-    letter-spacing: -3px;
-
-    span {
-        font-size: 72px;
+    /* HEEY text */
+    .title {
+        margin-bottom: vars.$mg-lg;
     }
 }
 
