@@ -47,6 +47,16 @@
     overflow: auto;
 }
 
+/* navigation list item <li> */
+.header__list-item {
+    visibility: inherit;
+
+    /* direct (any) child element */
+    & > * {
+        visibility: inherit;
+    }
+}
+
 /* single header link <a> */
 .header__link {
     font-weight: 500;
@@ -58,11 +68,15 @@
     background-color: transparent;
     border: none;
     transition: vars.$transition;
-    transition-property: transform;
+    transition-property: transform, opacity;
     cursor: pointer;
     position: relative;
     width: 36px;
     height: 32px;
+
+    &:hover {
+        opacity: 0.5;
+    }
 
     span {
         display: inline-block;

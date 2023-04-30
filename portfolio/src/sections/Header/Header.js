@@ -7,7 +7,6 @@ import './theme-toggler/theme-toggler.scss';
 /* dom elements */
 const navButton = document.querySelector('.header__nav-btn');
 const navList = document.querySelector('.header__links-list');
-const navElems = document.querySelectorAll('.header__list-item > *');
 
 /* show/hide the navigation menu */
 // navigation status
@@ -43,40 +42,24 @@ function hideNav() {
 navButton.addEventListener('click', () => {
     if (!navActive) {
         showNav();
-        showLinks();
     } else {
         hideNav();
-        setTimeout(() => {
-            hideLinks();
-        }, 350);
     }
 });
 
-/* manage the links' tab index */
-function showLinks() {
-    navElems.forEach((link) => {
-        link.style.visibility = 'visible';
-    });
-}
-
-function hideLinks() {
-    navElems.forEach((link) => {
-        link.style.visibility = 'hidden';
-    });
-}
-
-if (window.innerWidth <= 1024) {
-    hideLinks();
-}
-
 window.addEventListener('resize', () => {
     if (window.innerWidth > 1024) {
-        if (navActive) {
-            hideNav();
-        } else {
-            showLinks();
-        }
-    } else if (window.innerWidth <= 1024 && !navActive) {
-        hideLinks();
+        // hide the navigation menu
+        hideNav();
+
+        // show the links
+        setTimeout(() => {
+            navList.style.visibility = 'visible';
+        }, 350);
+    } else {
+        // hide the links
+        setTimeout(() => {
+            navList.style.visibility = 'hidden';
+        }, 355);
     }
 });

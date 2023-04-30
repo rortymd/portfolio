@@ -1,48 +1,36 @@
 // libraries
-import { gsap } from 'gsap';
-import scrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
 // styles
 import './Bio.scss';
 
-// scroll triggered animation
-gsap.registerPlugin(scrollTrigger);
+/* DOM nodes */
+const title = document.querySelector('.bio .title');
+const subtitle = document.querySelectorAll('.bio .subtitle');
 
-const heyLetters = gsap.utils.toArray('.bio__title-hey span');
-const paragraphs = gsap.utils.toArray('.bio__paragraph span');
-
-// heyLetters.forEach((span) => {
-//     gsap.set(span, {
-//         x: 300,
-//         opacity: 0,
-//     });
-// });
-
-// paragraphs.forEach((span) => {
-//     gsap.set(span, {
-//         x: 300,
-//         opacity: 0,
-//     });
-// });
-
-// gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.bio__title',
-//         start: '50px 70%',
-//         end: '+=500 100%',
-//         scrub: 2,
+// const tl = gsap.timeline({
+//     defaults: {
+//         ease: 'elastic',
 //     },
-// })
-//     .to(heyLetters, {
-//         x: 0,
-//         opacity: 1,
-//         stagger: 1,
-//         delay: 0.5,
-//         ease: 'power4.out',
-//     })
-//     .to(paragraphs, {
-//         x: 0,
-//         opacity: 1,
-//         stagger: 1,
-//         delay: 0.5,
-//         ease: 'power4.out',
-//     });
+// });
+
+// tl.from(title, {
+//     x: -300,
+//     duration: 2,
+// });
+
+// tl.to(title, {
+//     scale: 1.5,
+//     transformOrigin: 'left',
+//     duration: 1,
+// });
+
+// tl.from(
+//     subtitle,
+//     {
+//         y: 'random(-50, 50)',
+//         opacity: 0,
+//         rotateX: 360,
+//         stagger: 0.5,
+//     },
+//     '<'
+// );
