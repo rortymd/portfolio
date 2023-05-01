@@ -48,15 +48,17 @@ introItems.forEach((item) => {
     const linksWrapper = item.querySelector('.intro-item__links');
 
     const action = gsap
-        .timeline({ paused: true })
-        .to(infoWrapper, {
-            y: 0,
-            opacity: 1,
+        .timeline({
+            paused: true,
+            defaults: {
+                y: 100,
+                opacity: 0,
+            },
+        })
+        .from(infoWrapper, {
             duration: 0.75,
         })
-        .to(linksWrapper, {
-            y: 0,
-            opacity: 1,
+        .from(linksWrapper, {
             duration: 0.5,
         });
 

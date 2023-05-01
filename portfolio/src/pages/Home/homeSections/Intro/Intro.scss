@@ -76,8 +76,6 @@
 /* wrapper for the name and the description */
 .intro-item__descr {
     width: 60%;
-    opacity: 0;
-    transform: translate3d(0, 100px, 0);
 }
 
 /* wrapper for the links */
@@ -86,8 +84,6 @@
     flex-direction: column;
     row-gap: vars.$mg;
     margin-top: auto;
-    opacity: 0;
-    transform: translate3d(0, 100px, 0);
 }
 
 /* single item's link */
