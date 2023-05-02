@@ -92,13 +92,6 @@
 }
 
 /* SCREEN ADAPTATION */
-@media (min-height: 1000px) {
-    .intro-item {
-        min-height: auto;
-        max-height: 1000px;
-    }
-}
-
 @media (max-width: vars.$smallScreen) {
     /* item info */
     .intro-item__info {
