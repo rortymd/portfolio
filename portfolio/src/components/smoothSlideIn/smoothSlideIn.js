@@ -1,26 +1,15 @@
-import './smoothSlideIn.scss';
+import gsap from 'gsap';
 
-// .slide-in-trigger is the element which will be used for the IntersectionObserver to work (could be a parent node)
-const elems = document.querySelectorAll('.slide-in-trigger');
+const sections = gsap.utils.toArray('.slide-in');
 
-const callback = (entries, observer) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            // .slide-in is an actual element which needs to be shown
-            const elem = entry.target.querySelector('.slide-in');
-
-            elem.style.opacity = 1;
-            elem.style.transform = 'translate3d(0, 0, 0)';
-
-            observer.unobserve(elem);
-        }
+sections.forEach((section) => {
+    gsap.from(section, {
+        x: -300,
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.25,
+        scrollTrigger: {
+            trigger: section,
+        },
     });
-};
-
-const options = {
-    threshold: 0.5,
-};
-
-const observer = new IntersectionObserver(callback, options);
-
-elems.forEach((elem) => observer.observe(elem));
+});
