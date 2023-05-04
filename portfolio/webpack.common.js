@@ -16,14 +16,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.html$/i,
-                loader: 'html-loader',
-            },
-            {
-                test: /\.ejs$/i,
-                use: ['html-loader', 'template-ejs-loader'],
-            },
-            {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
                 type: 'asset/resource',
                 generator: {
@@ -56,12 +48,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/pages/Home/Home.ejs',
+            template: './src/pages/Home/Home.html',
             filename: 'index.html',
             chunks: ['homePage'],
         }),
         new HtmlWebpackPlugin({
-            template: './src/pages/About/About.ejs',
+            template: './src/pages/About/About.html',
             filename: 'about/index.html',
             chunks: ['aboutPage'],
         }),

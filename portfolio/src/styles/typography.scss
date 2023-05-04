@@ -46,8 +46,10 @@
 .paragraph {
     @include text;
 
+    max-width: 1100px;
     font-size: 18px;
     font-weight: 400;
+    line-height: 180%;
 
     &.paragraph--sm {
         font-size: 14px;

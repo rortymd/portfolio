@@ -53,6 +53,12 @@
     background-color: rgba(vars.$white, 0.4);
 }
 
+/* color of the selected text */
+::selection {
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -87,6 +93,14 @@ main {
     overflow: hidden;
 }
 
+section {
+    margin-bottom: 100px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 /* main size container */
 .container {
     max-width: 1200px;
@@ -97,21 +111,6 @@ main {
 /* prevent scrolling */
 .no-scroll {
     overflow: hidden !important;
-}
-
-a,
-button,
-h1,
-h2,
-h3,
-p,
-span,
-li,
-img {
-    &::selection {
-        color: var(--main-color);
-        background-color: var(--secondary-color);
-    }
 }
 
 /* SCREEN ADAPTATION */
