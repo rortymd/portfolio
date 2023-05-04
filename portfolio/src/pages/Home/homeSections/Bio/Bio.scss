@@ -8,14 +8,15 @@
 
     /* HEEY text */
     .title {
-        margin-bottom: vars.$mg-lg;
+        margin-bottom: vars.$mg;
+        letter-spacing: -3px;
     }
 }
 
 /* emoji */
 .bio__emoji {
     display: block;
-    width: 60px;
+    width: 50px;
     margin-left: vars.$mg-sm;
-    transform: translateY(10%);
+    transform: translateY(20%);
 }

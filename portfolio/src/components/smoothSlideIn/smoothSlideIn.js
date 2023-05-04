@@ -10,6 +10,7 @@ sections.forEach((section) => {
         delay: 0.25,
         scrollTrigger: {
             trigger: section,
+            start: 'top 95%',
         },
     });
 });

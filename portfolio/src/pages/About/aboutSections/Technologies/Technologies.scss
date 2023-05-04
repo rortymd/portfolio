@@ -1,0 +1,72 @@
+@use '../../../../styles/vars';
+
+.technologies__section-title {
+    margin-bottom: vars.$mg-lg;
+}
+
+.technologies__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: vars.$mg;
+    // border: 1px solid #000;
+}
+
+.technologies__item {
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    // border: 1px solid #000;
+
+    &:hover,
+    &:focus {
+        .technologies__info {
+            opacity: 1;
+            transform: translate3d(-50%, -100%, 0);
+            visibility: visible;
+            z-index: 2;
+        }
+    }
+}
+
+.technologies__icon {
+    width: 60px;
+    fill: var(--secondary-color);
+    transition: vars.$transition;
+    transition-property: fill;
+}
+
+.technologies__name {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.technologies__info {
+    width: 200px;
+    padding: vars.$mg-sm vars.$mg;
+    background-color: var(--main-color-alpha);
+    border-radius: 8px;
+    opacity: 0;
+    transform: translate3d(-50%, -80%, 0);
+    transition: vars.$transition;
+    cursor: auto;
+    visibility: hidden;
+    position: absolute;
+    top: -#{vars.$mg};
+    left: 50%;
+    z-index: -1;
+}
+
+/* dark website theme */
+body.dark-theme {
+    .technologies__info {
+        box-shadow: 0 0 15px 1px rgba(vars.$white, 0.1);
+    }
+}
+
+/* light website theme */
+body.light-theme {
+    .technologies__info {
+        box-shadow: 0 0 15px 1px rgba(vars.$black, 0.1);
+    }
+}

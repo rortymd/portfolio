@@ -9,6 +9,8 @@ import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadin
 import 'Components/gsapPlugins';
 // sections
 import 'Sections/Header/Header';
+import './aboutSections/Title/Title.scss';
+import './aboutSections/Technologies/Technologies.scss';
 import 'Sections/Footer/Footer.scss';
 // gsap script (import it the last to avoid spacing conflicts)
 import 'Components/smoothSlideIn/smoothSlideIn';

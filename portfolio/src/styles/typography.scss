@@ -26,9 +26,8 @@
 
     /* <h1> main title on the page */
     &.title--main {
-        font-size: 72px;
-        font-weight: 400;
-        letter-spacing: -3px;
+        font-size: 60px;
+        font-weight: 300;
     }
 }
 
@@ -47,9 +46,14 @@
     @include text;
 
     max-width: 1100px;
+    margin-bottom: 5px;
     font-size: 18px;
     font-weight: 400;
     line-height: 180%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     &.paragraph--sm {
         font-size: 14px;
@@ -87,12 +91,17 @@
 
 /* mobile phones */
 @media (max-width: vars.$phone) {
-    /* <h1> || <h2> */
+    /* <h2> */
     .title {
         font-size: 32px;
 
         &.title--lg {
             font-size: 42px;
+        }
+
+        /* <h1> main title on the page */
+        &.title--main {
+            font-size: 48px;
         }
     }
 
