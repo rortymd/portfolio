@@ -23,16 +23,20 @@
 .technologies__list {
     display: flex;
     flex-wrap: wrap;
-    row-gap: vars.$mg-lg;
 }
 
 /* single technology item */
 .technologies__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 100px;
     width: 20%;
     text-align: center;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     position: relative;
+    // border: 1px solid #000;
 
     /* expand the detailed information */
     &:hover,
@@ -48,10 +52,14 @@
 
 /* icon of a technology */
 .technologies__icon {
+    // border: 1px solid #000;
     width: 60px;
     fill: var(--secondary-color);
+    transform: translateY(-50%);
     transition: vars.$transition;
     transition-property: fill, stroke;
+    position: relative;
+    top: 50%;
 
     &.technologies__icon--no-fill {
         fill: none;
@@ -64,8 +72,9 @@
 
 /* name of a technology */
 .technologies__name {
-    margin-bottom: 0;
+    margin: auto 0 0;
     font-weight: 500;
+    // border: 1px solid #000;
 }
 
 /* detailed information */
@@ -76,11 +85,11 @@
     opacity: 0;
     transform: translate3d(0, -90%, 0);
     transition: vars.$transition;
-    cursor: auto;
+    cursor: default;
     visibility: hidden;
     pointer-events: none;
     position: absolute;
-    top: -#{vars.$mg};
+    top: 20%;
     left: 0;
     right: 0;
     z-index: -1;
