@@ -119,8 +119,16 @@ section {
 
 /* tablets */
 @media (max-width: vars.$tablet) {
+    /* main size container */
+    .container {
+        padding: 0 10px;
+    }
 }
 
 /* mobile phones */
 @media (max-width: vars.$phone) {
+    /* main size container */
+    .container {
+        padding: 0 5px;
+    }
 }

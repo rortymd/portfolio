@@ -14,9 +14,8 @@
     }
 }
 
-/* description of the level */
 .technologies__level-subtitle {
-    margin-bottom: vars.$mg;
+    margin-bottom: 0;
 }
 
 /* list of the items */
@@ -36,7 +35,6 @@
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     position: relative;
-    // border: 1px solid #000;
 
     /* expand the detailed information */
     &:hover,
@@ -52,7 +50,6 @@
 
 /* icon of a technology */
 .technologies__icon {
-    // border: 1px solid #000;
     width: 60px;
     fill: var(--secondary-color);
     transform: translateY(-50%);
@@ -74,7 +71,6 @@
 .technologies__name {
     margin: auto 0 0;
     font-weight: 500;
-    // border: 1px solid #000;
 }
 
 /* detailed information */
