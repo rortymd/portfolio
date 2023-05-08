@@ -8,9 +8,9 @@ import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
 import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadingPlaceholder';
 import 'Components/gsapPlugins';
 // sections
-import 'Sections/Header/Header';
+import 'Sections/Header/Header.js';
 import './aboutSections/Title/Title.scss';
-import './aboutSections/Technologies/Technologies.scss';
+import './aboutSections/Technologies/Technologies.js';
 import 'Sections/Footer/Footer.scss';
 // gsap script (import it the last to avoid spacing conflicts)
 import 'Components/smoothSlideIn/smoothSlideIn';

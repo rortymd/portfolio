@@ -1,16 +1,19 @@
+// libraries
 import gsap from 'gsap';
+// styles
+import './Technologies.scss';
 
-const sections = gsap.utils.toArray('.slide-in');
+const cards = gsap.utils.toArray('.technologies__item');
 
-sections.forEach((section) => {
+cards.forEach((section) => {
     gsap.from(section, {
-        x: -300,
         opacity: 0,
         duration: 0.5,
-        delay: 0.25,
+        stagger: 4,
+        delay: 0.5,
         scrollTrigger: {
             trigger: section,
-            start: 'top 95%',
+            start: '30% 95%',
             end: 'bottom 10%',
             toggleActions: 'play pause resume pause',
         },
