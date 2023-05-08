@@ -4,6 +4,7 @@
 .link {
     @include typography.text;
 
+    display: inline-block;
     padding-bottom: 3px;
     font-size: 18px;
     transition-property: color, opacity;

@@ -3,7 +3,7 @@
 @mixin text {
     color: var(--secondary-color);
     transition: vars.$transition;
-    transition-property: color;
+    transition-property: color, border;
     letter-spacing: 1px;
 
     &:last-child {
@@ -28,6 +28,11 @@
     &.title--main {
         font-size: 60px;
         font-weight: 300;
+    }
+
+    /* small title */
+    &.title--sm {
+        font-size: 26px;
     }
 }
 
@@ -102,6 +107,11 @@
         /* <h1> main title on the page */
         &.title--main {
             font-size: 48px;
+        }
+
+        /* small title */
+        &.title--sm {
+            font-size: 24px;
         }
     }
 

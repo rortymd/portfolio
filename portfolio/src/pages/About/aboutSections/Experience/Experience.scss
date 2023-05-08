@@ -1,0 +1,21 @@
+@use '../../../../styles/vars';
+
+.experience__title {
+    margin-bottom: vars.$mg;
+}
+
+.experience__wrapper {
+    max-width: 700px;
+}
+
+.experience__item {
+    .paragraph {
+        margin-left: 30px;
+        padding-left: 30px;
+        border-left: 2px solid var(--secondary-color);
+
+        &:hover {
+            border-left: 2px solid vars.$red;
+        }
+    }
+}
