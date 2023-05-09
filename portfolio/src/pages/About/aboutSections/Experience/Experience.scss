@@ -13,8 +13,14 @@
         margin-left: 30px;
         padding-left: 30px;
         border-left: 2px solid var(--secondary-color);
+    }
 
-        &:hover {
+    &:hover {
+        .title {
+            color: vars.$red;
+        }
+
+        .paragraph {
             border-left: 2px solid vars.$red;
         }
     }

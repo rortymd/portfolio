@@ -42,13 +42,12 @@
 }
 
 /* background image */
-.image.intro-item__cover {
+.lazy-image.intro-item__cover {
     grid-column: 1;
     grid-row: 1;
     z-index: 1;
 
-    .lazy-image {
-        min-width: 100%;
+    img {
         height: 100%;
         object-fit: cover;
     }

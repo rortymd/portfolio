@@ -106,7 +106,6 @@ body.dark-theme {
     /* alternative button styles */
     .btn--alt {
         color: vars.$black;
-        border-color: rgba(vars.$black, 0.2);
 
         &::before {
             background-image: linear-gradient(
@@ -169,7 +168,6 @@ body.light-theme {
     /* alternative button styles */
     .btn--alt {
         color: vars.$white;
-        border-color: rgba(vars.$white, 0.2);
 
         &::before {
             background-image: linear-gradient(

@@ -6,13 +6,17 @@ const lazyLoadImages = () => {
     const callback = (entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                const image = entry.target;
+                // <figure> element
+                const imageWrapper = entry.target;
+                // children <img> element
+                const image = imageWrapper.querySelector('img');
+
                 const dataSrc = image.getAttribute('data-src');
 
                 import(/* webpackMode: "eager" */ `Src/images/lazyload/${dataSrc}`).then((src) => {
                     image.setAttribute('src', src.default);
                     image.addEventListener('load', () => {
-                        image.parentNode.classList.add('image-loaded');
+                        imageWrapper.classList.add('image-loaded');
                     });
                 });
 

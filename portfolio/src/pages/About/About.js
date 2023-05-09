@@ -11,7 +11,8 @@ import 'Components/gsapPlugins';
 import 'Sections/Header/Header.js';
 import './aboutSections/Title/Title.scss';
 import './aboutSections/Technologies/Technologies.js';
-import './aboutSections/Experience/Experience.js';
+import './aboutSections/Experience/Experience.scss';
+import './aboutSections/Performance/Performance.scss';
 import 'Sections/Footer/Footer.scss';
 // gsap script (import it the last to avoid spacing conflicts)
 import 'Components/smoothSlideIn/smoothSlideIn';
