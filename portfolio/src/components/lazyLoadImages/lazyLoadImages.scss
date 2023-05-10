@@ -33,6 +33,10 @@
         img {
             opacity: 1;
         }
+
+        figcaption {
+            color: var(--secondary-color);
+        }
     }
 }
 
@@ -47,4 +51,8 @@
     transition-property: opacity;
     position: relative;
     z-index: 2;
+}
+
+.lazy-image figcaption {
+    color: vars.$black;
 }
