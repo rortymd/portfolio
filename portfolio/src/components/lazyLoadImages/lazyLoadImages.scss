@@ -1,6 +1,7 @@
 @use '../../styles/vars';
 
 .lazy-image {
+    max-width: 100%;
     background-color: vars.$white;
     border: 4px solid vars.$black;
     border-radius: 8px;
@@ -42,9 +43,8 @@
 
 .lazy-image img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    margin-bottom: 10px;
     border-radius: 8px;
     opacity: 0;
     transition: vars.$transition;
@@ -54,5 +54,6 @@
 }
 
 .lazy-image figcaption {
+    margin-top: 10px;
     color: vars.$black;
 }

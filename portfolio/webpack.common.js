@@ -7,6 +7,7 @@ module.exports = {
     entry: {
         homePage: './src/pages/Home/Home.js',
         aboutPage: './src/pages/About/About.js',
+        projectsPage: './src/pages/Projects/Projects.js',
     },
     output: {
         filename: 'assets/scripts/[name].[contenthash].js',
@@ -56,6 +57,11 @@ module.exports = {
             template: './src/pages/About/About.html',
             filename: 'about/index.html',
             chunks: ['aboutPage'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/Projects/Projects.html',
+            filename: 'projects/index.html',
+            chunks: ['projectsPage'],
         }),
     ],
     resolve: {

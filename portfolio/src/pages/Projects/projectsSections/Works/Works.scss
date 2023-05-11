@@ -1,0 +1,107 @@
+@use '../../../../styles/vars';
+
+/* wrapper for the items */
+.works__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: vars.$mg;
+    row-gap: vars.$mg-lg;
+}
+
+/* single portfolio item */
+.works__item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    transition: vars.$transition;
+    transition-property: background-color;
+    overflow: hidden;
+
+    &:hover,
+    &:focus {
+        .lazy-image {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+    }
+}
+
+/* item's cover image */
+.works__item .lazy-image {
+    margin-top: auto;
+    transition: vars.$transition;
+    transition-property: transform, filter;
+    filter: grayscale(40%);
+
+    img {
+        height: 300px;
+        border-radius: 0;
+        object-fit: cover;
+    }
+}
+
+/* item's title */
+.works__item .title {
+    margin-bottom: 0;
+    padding: vars.$mg-sm;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    transition-property: color, background-color;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* wrapper for the description */
+.works__item-description {
+    padding: vars.$mg-sm;
+    background-color: var(--secondary-color);
+    transition: vars.$transition;
+    position: relative;
+    z-index: 2;
+}
+
+/* description paragraph */
+.works__item .paragraph {
+    color: var(--main-color);
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: vars.$smallScreen) {
+    /* item's cover image */
+    .works__item .lazy-image {
+        img {
+            height: 250px;
+        }
+    }
+}
+
+/* tablets */
+@media (max-width: vars.$tablet) {
+    /* wrapper for the items */
+    .works__inner {
+        grid-template-columns: 1fr;
+    }
+
+    /* single portfolio item */
+    .works__item {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+/* mobile phones */
+@media (max-width: vars.$phone) {
+    /* single portfolio item */
+    .works__item {
+        width: 95%;
+    }
+
+    /* item's cover image */
+    .works__item .lazy-image {
+        img {
+            height: 200px;
+        }
+    }
+}
