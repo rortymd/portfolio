@@ -30,6 +30,7 @@
 /* item's cover image */
 .works__item .lazy-image {
     margin-top: auto;
+    border-radius: 0;
     transition: vars.$transition;
     transition-property: transform, filter;
     filter: grayscale(40%);

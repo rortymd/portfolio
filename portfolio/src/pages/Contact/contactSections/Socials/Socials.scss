@@ -1,0 +1,109 @@
+@use '../../../../styles/vars';
+
+.socials__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: vars.$mg;
+    row-gap: 60px;
+}
+
+.socials__item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    // border: 1px solid #fff;
+}
+
+.socials__item-link {
+    &:hover,
+    &:focus {
+        .socials__item-icon {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.socials__item-icon {
+    width: 80px;
+    margin-bottom: vars.$mg-sm;
+    transition: vars.$transition;
+}
+
+.socials__item-name {
+    display: flex;
+    column-gap: vars.$mg-sm;
+}
+
+.socials__item-copy {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        .socials__item-copy-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &:active {
+        .socials__item-copy-icon {
+            transform: scale(0.8);
+        }
+    }
+}
+
+.socials__item-copy-icon {
+    width: 24px;
+    opacity: 0.75;
+    transform: scale(0.95);
+    transition: vars.$transition;
+}
+
+.socials__item-copy-notification {
+    font-size: 12px;
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+    transition: vars.$transition;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+
+    &.socials__item-copy-notification--active {
+        opacity: 1;
+        transform: translate3d(-50%, -110%, 0);
+        visibility: visible;
+        z-index: 1;
+    }
+}
+
+/* SCREEN ADAPTATION */
+/* tablets */
+@media (max-width: vars.$tablet) {
+    .socials__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* mobile phones */
+@media (max-width: vars.$phone) {
+    .socials__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .socials__item-icon{
+        width: 60px;
+    }
+
+    .socials__item-name{
+        font-size: 14px;
+    }
+
+    .socials__item-copy-icon{
+        width: 20px;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page description -->
+    <meta name="description" content="Author: A.N. Author,
+    Illustrator: P. Picture, Category: Books, Price: $17.99,
+    Length: 784 pages">
+    <title>DmitriyR54 | Contact</title>
+    <!-- loading placeholder's styles -->
+    <%= require('html-loader!../../components/loadingPlaceholder/loadingPlaceholderStyles.html').default %>
+    <!-- favicon and meta data -->
+    <%= require('html-loader!../../sections/Favicon/Favicon.html').default %>
+</head>
+
+<body>
+    <!-- show the placeholder while the page is loading -->
+    <%= require('html-loader!../../components/loadingPlaceholder/loadingPlaceholder.html').default %>
+    <!-- website content -->
+    <%= require('html-loader!../../sections/Header/Header.html').default %>
+    <main class="main">
+        <%= require('html-loader!./contactSections/Title/Title.html').default %>
+        <%= require('html-loader!./contactSections/Socials/Socials.html').default %>
+    </main>
+    <%= require('html-loader!../../sections/Footer/Footer.html').default %>
+</body>
+
+</html>
