@@ -1,6 +1,7 @@
 @use '../../styles/vars';
 @use '../../styles/typography.scss';
 
+/* primary link */
 .link {
     @include typography.text;
 
@@ -17,7 +18,7 @@
         width: 99%;
         height: 2px;
         background-color: var(--secondary-color);
-        border-radius: 6px;
+        border-radius: 10px;
         opacity: 0.75;
         transform: translate3d(-50%, 0, 0);
         transition: vars.$transition;
@@ -37,6 +38,48 @@
 
     &:active {
         opacity: 0.5;
+    }
+}
+
+/* anchor link */
+.anchor-link {
+    position: relative;
+
+    &::after {
+        display: inline-block;
+        width: 16px;
+        transition: vars.$transition;
+        transform: translate3d(0, 25%, 0);
+        opacity: 0;
+        position: relative;
+        top: -5px;
+        right: 0;
+        z-index: -1;
+    }
+
+    &:hover,
+    &:focus {
+        &::after {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+}
+
+/* dark website theme */
+body.dark-theme {
+    /* anchor link */
+    .anchor-link::after {
+        content: url('../images/icons/hashtag-light.svg');
+    }
+}
+
+/* light website theme */
+body.light-theme {
+    /* anchor link */
+    .anchor-link::after {
+        content: url('../images/icons/hashtag-dark.svg');
     }
 }
 

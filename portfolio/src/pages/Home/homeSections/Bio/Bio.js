@@ -11,7 +11,7 @@ const subtitle = gsap.utils.toArray('.bio .subtitle span');
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: section,
-        start: 'top 100',
+        start: 'top 50',
         end: '+=6000',
         scrub: 1,
         pin: true,
