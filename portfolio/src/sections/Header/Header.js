@@ -20,8 +20,11 @@ function showNav() {
     navButton.classList.add('header__nav-btn--active');
     navList.classList.add('header__links-list--active');
 
-    // set the css "visibility" property
-    navList.style.visibility = 'visible';
+    // prevent scrolling
+    document.body.style.overflow = 'hidden';
+
+    // handle the aria attributes
+    navButton.setAttribute('aria-expanded', true);
 }
 
 function hideNav() {
@@ -32,34 +35,14 @@ function hideNav() {
     navButton.classList.remove('header__nav-btn--active');
     navList.classList.remove('header__links-list--active');
 
-    // set the css "visibility" property
-    setTimeout(() => {
-        navList.style.visibility = 'hidden';
-    }, 350);
+    // allow scrolling
+    document.body.style.overflow = 'visible';
+
+    // handle the aria attributes
+    navButton.setAttribute('aria-expanded', false);
 }
 
 // handle click on the burger menu button
 navButton.addEventListener('click', () => {
-    if (!navActive) {
-        showNav();
-    } else {
-        hideNav();
-    }
-});
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 1024) {
-        // hide the navigation menu
-        hideNav();
-
-        // show the links
-        setTimeout(() => {
-            navList.style.visibility = 'visible';
-        }, 350);
-    } else {
-        // hide the links
-        setTimeout(() => {
-            navList.style.visibility = 'hidden';
-        }, 355);
-    }
+    navActive ? hideNav() : showNav();
 });

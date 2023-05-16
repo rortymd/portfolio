@@ -129,7 +129,6 @@
         background-color: var(--main-color-alpha);
         opacity: 0;
         transition: vars.$transition;
-        transition-property: opacity;
         visibility: hidden;
         position: fixed;
         top: 0;
@@ -140,7 +139,7 @@
 
         &.header__links-list--active {
             opacity: 1;
-            transform: translate3d(0, 0, 0);
+            visibility: visible;
             z-index: 1;
 
             .header__list-item {
@@ -173,6 +172,13 @@
         display: block;
         position: relative;
         z-index: 2;
+    }
+}
+
+/* tablets */
+@media(max-width: vars.$tablet){
+    .header__inner{
+        padding: 10px 0;
     }
 }
 

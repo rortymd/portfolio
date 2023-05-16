@@ -73,22 +73,10 @@ body {
 
     &.dark-theme {
         background-image: url('../images/backgrounds/body-bg-dark.svg');
-
-        .os-scrollbar {
-            --os-handle-bg: rgba(217, 217, 217, 0.25);
-            --os-handle-bg-hover: rgba(217, 217, 217, 0.75);
-            --os-handle-bg-active: rgba(217, 217, 217, 0.85);
-        }
     }
 
     &.light-theme {
         background-image: url('../images/backgrounds/body-bg-light.svg');
-
-        .os-scrollbar {
-            --os-handle-bg: rgba(20, 20, 20, 0.25);
-            --os-handle-bg-hover: rgba(20, 20, 20, 0.75);
-            --os-handle-bg-active: rgba(20, 20, 20, 0.85);
-        }
     }
 }
 
@@ -101,8 +89,8 @@ main {
 section {
     padding-top: 100px;
 
-    &:last-child {
-        margin-bottom: 0;
+    &:first-child {
+        padding-top: 150px;
     }
 }
 
@@ -110,7 +98,7 @@ section {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 25px;
 }
 
 /* SCREEN ADAPTATION */
@@ -125,6 +113,10 @@ section {
 
     section {
         padding-top: 75px;
+
+        &:first-child {
+            padding-top: 100px;
+        }
     }
 }
 

@@ -1,7 +1,7 @@
 @use '../../../../styles/vars';
 
 .intro {
-    padding-top: 0;
+    padding-top: 0 !important;
     background-color: var(--intro-bg-color);
 
     .splide__arrow {

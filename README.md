@@ -1,6 +1,6 @@
 # portfolio
 
-My portfolio website.
+My portfolio website
 
 Useful services:
 

@@ -2,7 +2,7 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
     <rect x="0" y="0" width="1500" height="5000" fill="#d9d9d9"></rect>
-    <g fill="none" stroke="#d1d1d1" stroke-width="20">
+    <g fill="none" stroke="#d3d3d3" stroke-width="20">
         <circle r="108" cx="1337" cy="2967"></circle>
         <circle r="53" cx="501" cy="1227"></circle>
         <circle r="69" cx="447" cy="3938"></circle>

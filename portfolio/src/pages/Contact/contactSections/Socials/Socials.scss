@@ -1,5 +1,6 @@
 @use '../../../../styles/vars';
 
+/* list of the links */
 .socials__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -7,33 +8,39 @@
     row-gap: 60px;
 }
 
+/* <li> */
 .socials__item {
     display: flex;
     justify-content: center;
     text-align: center;
-    // border: 1px solid #fff;
 }
 
+/* <a> link */
 .socials__item-link {
     &:hover,
     &:focus {
         .socials__item-icon {
+            opacity: 1;
             transform: scale(1.1);
         }
     }
 }
 
+/* main icon */
 .socials__item-icon {
     width: 80px;
     margin-bottom: vars.$mg-sm;
+    opacity: 0.75;
     transition: vars.$transition;
 }
 
+/* name */
 .socials__item-name {
     display: flex;
     column-gap: vars.$mg-sm;
 }
 
+/* copy button */
 .socials__item-copy {
     background-color: transparent;
     border: none;
@@ -42,6 +49,7 @@
 
     &:hover,
     &:focus {
+        /* copy button icon */
         .socials__item-copy-icon {
             opacity: 1;
             transform: scale(1);
@@ -55,6 +63,7 @@
     }
 }
 
+/* copy button icon */
 .socials__item-copy-icon {
     width: 24px;
     opacity: 0.75;
@@ -62,6 +71,7 @@
     transition: vars.$transition;
 }
 
+/* copy button notification */
 .socials__item-copy-notification {
     font-size: 12px;
     opacity: 0;
@@ -73,6 +83,7 @@
     left: 50%;
     z-index: -1;
 
+    /* active status */
     &.socials__item-copy-notification--active {
         opacity: 1;
         transform: translate3d(-50%, -110%, 0);
@@ -84,26 +95,36 @@
 /* SCREEN ADAPTATION */
 /* tablets */
 @media (max-width: vars.$tablet) {
+    /* list of the links */
     .socials__list {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* main icon */
+    .socials__item-icon {
+        width: 70px;
     }
 }
 
 /* mobile phones */
 @media (max-width: vars.$phone) {
+    /* list of the links */
     .socials__list {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .socials__item-icon{
+    /* main icon */
+    .socials__item-icon {
         width: 60px;
     }
 
-    .socials__item-name{
+    /* name */
+    .socials__item-name {
         font-size: 14px;
     }
 
-    .socials__item-copy-icon{
+    /* copy button icon */
+    .socials__item-copy-icon {
         width: 20px;
     }
 }
