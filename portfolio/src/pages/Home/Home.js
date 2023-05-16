@@ -7,6 +7,7 @@ import 'Components/lazyLoadImages/lazyLoadImages.scss';
 import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
 import { hideLoadingPlaceholder } from 'Components/loadingPlaceholder/hideLoadingPlaceholder';
 import 'Components/gsapPlugins';
+import 'Components/cv-download';
 // sections
 import 'Sections/Header/Header';
 import './homeSections/Intro/Intro';

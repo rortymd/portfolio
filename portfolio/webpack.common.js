@@ -39,6 +39,13 @@ module.exports = {
                 },
             },
             {
+                test: /\.(pdf|txt)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/files/[name][ext]',
+                },
+            },
+            {
                 test: /\.(csv|tsv)$/i,
                 use: ['csv-loader'],
             },
